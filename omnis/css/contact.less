@@ -1,0 +1,93 @@
+.xl(@rules) {
+  @media (min-width: 1200px) { @rules(); }
+}
+.lg(@rules) {
+  @media (max-width: 1199px) and (min-width: 960px) { @rules(); }
+}
+.md(@rules) {
+  @media (max-width: 959px) and (min-width: 600px) { @rules(); }
+}
+.sm(@rules) {
+  @media (max-width: 599px) { @rules(); }
+}
+
+@black: #3e3a39;
+@text-color: #4c4948;
+@dark-gray: #727171;
+@light-gray: #bbb;
+@border-color: #9fa0a0;
+@hr-color: #d3d3d4;
+@font-size: 14px;
+
+form {
+  color: #666464;
+  font-size: 1.3rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding-right: 62px;
+  width: 390px;
+  .sm({
+    margin: 0 10px 0 10px;
+    width: calc(100vw - 60px);
+  });
+
+  div:not(:first-child) {
+    margin-top: 32px;
+    .sm({
+      margin-top: 20px;
+    });
+  }
+
+  label {
+    display: inline-block;
+    vertical-align: top;
+    width: 62px;
+    .sm({
+      width: 100%;
+    });
+  }
+
+  input {
+    border: solid 1px @border-color;
+    display: inline-block;
+    height: 24px;
+    width: 320px;
+    .sm({
+      width: 100%;
+    });
+  }
+
+  textarea {
+    border: solid 1px @border-color;
+    display: inline-block;
+    height: 132px;
+    width: 320px;
+    .sm({
+      width: 100%;
+    });
+  }
+
+  button {
+    font-size: @font-size;
+    height: 24px;
+    margin: 60px auto 0 172px;
+    display: block;
+    width: 100px;
+    border: solid 1px @border-color;
+    .sm({
+      margin: 60px auto 0 auto;
+    });
+  }
+}
+
+
+footer {
+  bottom: 0px;
+  position: fixed;
+
+  .sm({
+    margin-top: 100px;
+    position: relative;
+  });
+}

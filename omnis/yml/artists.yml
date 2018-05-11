@@ -1,0 +1,61 @@
+toru_kaneko:
+  name: Toru Kaneko
+  img:
+    - file: /img/topA1.jpg
+      title: Dummy
+      year: 2011
+      size: 1760×1760mm
+      media: null
+    - file: /img/topB1.jpg
+      title: Espace
+      year: 2011
+      size: 1760×1760mm
+      media: null
+    - file: /img/topA1.jpg
+      title: Dummy
+      year: 2011
+      size: 1760×1760mm
+      media: null
+    - file: /img/topB1.jpg
+      title: Espace
+      year: 2011
+      size: 1760×1760mm
+      media: null
+    - file: /img/topA1.jpg
+      title: Dummy
+      year: 2011
+      size: 1760×1760mm
+      media: null
+    - file: /img/topB1.jpg
+      title: Espace
+      year: 2011
+      size: 1760×1760mm
+      media: null
+    - file: /img/topA1.jpg
+      title: Dummy
+      year: 2011
+      size: 1760×1760mm
+      media: null
+    - file: /img/topB1.jpg
+      title: Espace
+      year: 2011
+      size: 1760×1760mm
+      media: null
+    - file: /img/topA1.jpg
+      title: Dummy
+      year: 2011
+      size: 1760×1760mm
+      media: null
+    - file: /img/topB1.jpg
+      title: Espace
+      year: 2011
+      size: 1760×1760mm
+      media: null
+  prof:
+    - title: Profile
+      history:
+        - year: 1978
+          text: 武蔵野美術大学造形学部油絵学科卒業
+        - year: "'80-'82"
+          text: フランスの国立美術学校（Ecole National Superieur Des Beaux-Arts）に留学
+
