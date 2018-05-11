@@ -1,0 +1,135 @@
+.xl(@rules) {
+  @media (min-width: 1200px) { @rules(); }
+}
+.lg(@rules) {
+  @media (max-width: 1199px) and (min-width: 960px) { @rules(); }
+}
+.md(@rules) {
+  @media (max-width: 959px) and (min-width: 600px) { @rules(); }
+}
+.sm(@rules) {
+  @media (max-width: 599px) { @rules(); }
+}
+
+@black: #3e3a39;
+@text-color: #4c4948;
+@dark-gray: #727171;
+@light-gray: #bbb;
+@border-color: #9fa0a0;
+@hr-color: #d3d3d4;
+
+.main, .site, .works {
+  position: relative;
+  width: 100%;
+  img {
+    width: 100%;
+  }
+}
+
+.exhibitions_2017 {
+  .site {
+    width: 100vw;
+    max-width: 960px;
+    .sm({
+      margin: calc(2vw - 1px) 0 0 0;
+    });
+    .md({
+      margin: calc(2vw - 1px) 0 0 0;
+    });
+    .lg({
+      margin: -40px 0 0 0;
+    });
+    .xl({
+      margin: -40px 0 0 0;
+    });
+    .img {
+      display: inline-block;
+      position: relative;
+      img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      .sm({
+        margin: calc(8vw - 3px) 0 0 0;
+        height: calc(69vw - 28px);
+        width: calc(100vw - 40px);
+      });
+      .md({
+        margin: calc(10vw - 10px) calc(8vw - 9px) 0 0;
+        height: calc(31vw - 30px);
+        width: calc(45vw - 43px);
+      });
+      .lg({
+        margin: 104px 57px 0 0;
+        height: 165px;
+        width: 250px;
+      });
+      .xl({
+        margin: 104px 57px 0 0;
+        height: 165px;
+        width: 250px;
+      });
+    }
+  }
+  .works {
+    width: 100vw;
+    max-width: 960px;
+    .sm({
+      margin: calc(7vw - 2px) 0 calc(10vw - 4px) 0;
+    });
+    .md({
+      margin: calc(2vw - 1px) 0 0 0;
+    });
+    .lg({
+      margin: 56px 0 124px 0;
+    });
+    .xl({
+      margin: 56px 0 124px 0;
+    });
+    .img {
+      display: inline-block;
+      position: relative;
+      img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      .sm({
+        margin: calc(10vw - 4px) calc(8vw - 4px) 0 0;
+        height: calc(45vw - 18px);
+        width: calc(45vw - 18px);
+      });
+      .md({
+        margin: calc(11vw - 11px) calc(7vw - 7px) 0 0;
+        height: calc(28vw - 27px);
+        width: calc(28vw - 27px);
+      });
+      .lg({
+        margin: 96px 84px 0 0;
+        height: 152px;
+        width: 152px;
+      });
+      .xl({
+        margin: 96px 84px 0 0;
+        height: 152px;
+        width: 152px;
+      });
+    }
+  }
+}
+
