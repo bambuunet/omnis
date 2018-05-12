@@ -9,19 +9,6 @@ $$(window).on('load', function(){
 $$(document).ready(function(){
   setSizeClass();
 
-  var easyCss = new Escss({
-    'PREFIX_OF_BREAKPOINT': {
-      'sm-': 0,
-      'md-': 600,
-      'lg-': 960,
-      'xl-': 1200
-    },
-    'COLOR': {
-      'red': '#f00'
-    }
-  });
-  easyCss.init();
-
   var easyLang = new Haole(['jp', 'en']);
   easyLang.init();
 
@@ -87,6 +74,21 @@ $$(document).ready(function(){
   $$('a').on('click', function(){
     link($$(this));
   });
+});
+
+$$(window).on('load', function(){
+  var easyCss = new Escss({
+    'PREFIX_OF_BREAKPOINT': {
+      'sm-': 0,
+      'md-': 600,
+      'lg-': 960,
+      'xl-': 1200
+    },
+    'COLOR': {
+      'red': '#f00'
+    }
+  });
+  easyCss.init();
 });
 
 $$(window).on('resize orientationchange', function(){

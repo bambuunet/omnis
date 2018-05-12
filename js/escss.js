@@ -1,6 +1,15 @@
-﻿/*
-escss ver0.0.2
-*/
+﻿/*ﾟ･*:.｡..｡.:*･ﾟ ﾟ･*:.｡..｡.:*･ﾟ ﾟ･*:.｡..｡.:*･ﾟ ﾟ･*:.｡..｡.:*･ﾟ
+
+  Escss 1.0.0
+  Escss makes us escape from CSS.
+
+  Copyright 2018- Ringo Takemura
+
+  Licensed under MIT (http://opensource.org/licenses/MIT)
+  Released on: May 1, 2018
+
+  ﾟ･*:.｡..｡.:*･ﾟ ﾟ･*:.｡..｡.:*･ﾟ ﾟ･*:.｡..｡.:*･ﾟ ﾟ･*:.｡..｡.:*･ﾟ*/
+
 var Escss = function(hash){
 
   this.hash = hash;
@@ -109,7 +118,6 @@ var Escss = function(hash){
     this.setBreakpoint();
 
     this.addStyleEachPrefix();
-
     console.info('Escss has finished. Styles were generated in ' + String(new Date() - timeStarted) + ' ms');
   }
 
@@ -197,6 +205,7 @@ var Escss = function(hash){
   }
 
   this.addStyleEachPrefix = function(){
+
     for(var i in this.BREAKPOINT){
       this.addStyleEachClass(this.BREAKPOINT[i]['prefix'], this.BREAKPOINT[i]['mediaString']);
     }
@@ -250,7 +259,7 @@ var Escss = function(hash){
   this.makeStyleOfQuantity = function(clsExcludePrefix){
     var propertyKey = clsExcludePrefix.match(/^[a-zA-Z]+/);
     var val = clsExcludePrefix.replace(propertyKey, '');
-    if(val.match(/^\d+$/)) val += 'px';
+    if(val.match(/^\-?\d+(\.\d+)?$/)) val += 'px';
     if(val.match(/pr$/)) val = val.replace('pr', '%');
     var property = this.RULE_OF_QUANTITY[propertyKey];
     return property + ':' + val;
@@ -260,11 +269,11 @@ var Escss = function(hash){
     //ex c#000
     var propertyKey = clsExcludePrefix.match(/^[a-zA-Z]+/);
     var property = this.RULE_OF_COLOR[propertyKey];
-    var val = clsExcludePrefix.replace(propertyKey, '').replace('#', '');
-    
+    var val = clsExcludePrefix.replace(propertyKey, '');
+
     if(val.match(/^\#[\da-fA-F]{3}$/)) return property + val ;
     if(val.match(/^\#[\da-fA-F]{6}$/)) return property + val ;
-    return property + this.COLOR[val];
+    return property + this.COLOR[val.replace('#', '')];
   }
 
   this.makeStyleOfCondition = function(clsExcludePrefix){
@@ -273,7 +282,7 @@ var Escss = function(hash){
 
   this.makeStyleOfOther = function(clsExcludePrefix){
     //ex border-bottom:solid_1px_#000
-    return clsExcludePrefix.replace('_', ' ');
+    return clsExcludePrefix.replace(/_/g, ' ');
   }
 
   this.changePrefixEscaped = function(prefix){

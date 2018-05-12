@@ -19,7 +19,7 @@
 
 @black: #3e3a39;
 @text-color: #4c4948;
-@dark-gray: #727171;
+@dark-gray: #7d7c7;
 @light-gray: #bbb;
 @border-color: #9fa0a0;
 @hr-color: #d3d3d4;
@@ -55,19 +55,19 @@ h1, h2 {
   font-family: "Open Sans Condensed";
   font-weight: 300;
   text-align: left;
-  transform: matrix(1, 0, 0, 0.9, 0, 0);
+  transform: matrix(1, 0, 0, 0.909, 0, 0);
   font-size: 1.54rem;
 }
 
 hr {
   border: solid 0.5px @hr-color;
   .lg({
-    margin-left: -28px;
-    width: 920px;
+    margin-left: -31px;
+    width: 926px;
   });
   .xl({
-    margin-left: -28px;
-    width: 920px;
+    margin-left: -31px;
+    width: 926px;
   });
 }
 
@@ -89,7 +89,6 @@ header {
     a {
       transform: matrix(1, 0, 0, 1.02, 0, 0);
     }
-    
   }
 
   a {
@@ -124,8 +123,10 @@ html.pc header{
   #lang {
     color: @light-gray;
     cursor: pointer;
+    font-size: 10px;
+    font-family: "Roboto";
     position: absolute;
-    right: -24px;
+    right: -20px;
     top: 12px;
     .current {
       color: @dark-gray;
@@ -500,6 +501,7 @@ article {
 
 footer {
   border-top: solid 1px @hr-color;
+  color: @black;
   height: 40px;
   margin: 0 20px;
   max-width: 960px;
