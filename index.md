@@ -17,22 +17,23 @@
 
 script
   $$(window).on('load', function(){
-
-    new Swiper('.swiper-container',{
-      loop: true,
-      //paginationClickable:true,
-      //calculateHeight:true,
-      touchRatio:0.6,
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'fraction',
-      },
-      effect: 'fade',
-      centeredSlides: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-    });
+    setTimeout(function(){
+      new Swiper('.swiper-container',{
+        loop: true,
+        //paginationClickable:true,
+        //calculateHeight:true,
+        touchRatio:0.6,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'fraction',
+        },
+        effect: 'fade',
+        centeredSlides: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+      });
+    }, 300);
   });
 

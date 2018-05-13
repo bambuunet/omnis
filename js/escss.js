@@ -215,13 +215,13 @@ var Escss = function(hash){
 
   this.addStyleEachClass = function(prefix, mediaString){
     var query = document.querySelectorAll('[class^="' + prefix + '"], [class*=" ' + prefix + '"]')
+
     for(var i=0; i<query.length; i++){
       var classArray = query[i].classList;
 
       for(var c=0; c<classArray.length; c++){
         var cls = classArray[c];
         var re = new RegExp('^' + this.changePrefixEscaped(prefix));
-
         if(cls.match(re)) this.addStyle(cls, prefix, mediaString);
       }
     }
@@ -231,7 +231,9 @@ var Escss = function(hash){
     var style = this.makeStyle(cls, prefix);
     cls = cls.replace(/([^\w\-])/g, '\\$1');
     var ruleString = '.' + cls + '{' + style + ';}';
-    if(mediaString != null) ruleString = mediaString + '{' + ruleString + '}';
+    if(mediaString != null){
+      ruleString = mediaString + '{' + ruleString + '}';
+    }
     this.CSS.insertRule(ruleString, this.CSS.cssRules.length);
   }
 
@@ -286,7 +288,7 @@ var Escss = function(hash){
   }
 
   this.changePrefixEscaped = function(prefix){
-    return prefix.replace(/([^\w\-])/g, '\\$1');
+    return prefix.replace(/([\*])/g, '\\$1');
   }
 
   this.sortHashVal = function(hash, keyOfSort){

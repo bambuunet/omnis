@@ -11,7 +11,7 @@
     <?php if(preg_match('/exhibitions/', $url)): ?>
     <link rel="stylesheet/less" href="/css/exhibitions.less?t=<?= time(); ?>">
     <?php elseif(preg_match('/artists/', $url)): ?>
-    <script type="text/javascript" src="/js/swiper.min.js"></script>
+    <script type="text/javascript" src="/js/swiper.js"></script>
     <link rel="stylesheet/less" href="/css/swiper.css">
     <script type="text/javascript" src="/js/y2j.js?t=<?= time(); ?>"></script>
     <link rel="stylesheet/less" href="/css/artists.less?t=<?= time(); ?>">
@@ -57,7 +57,7 @@
           <li class="nav-link"><a data-href="/about/" id="nav-about">About</a></li>
           <li class="nav-link"><a data-href="/essay/" id="nav-essay">Essay</a></li>
           <li class="nav-link"><a data-href="/contact/" id="nav-contact">Contact</a></li>
-          <li class="right"><a data-href="/shop">Online Shop</a></li>
+          <li class="right"><a data-href="/index_on_exhibition/">Online Shop</a></li>
         </ul>
         <ul class="social md-none lg-none xl-none">
           <li>

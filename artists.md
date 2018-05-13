@@ -66,6 +66,8 @@ section.artists
     .wrap
       .person
         .name Mari Tsutsumi
+section.photoBy photo Mareo Suemasa
+  
 
 #works.popup
   button#popupClose

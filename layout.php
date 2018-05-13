@@ -28,7 +28,35 @@ else{
 
 <?php else: ?>
   <script>
-    new Olelo('<?php echo $res."?t=".time(); ?>', 'article');
+  olelo();
+
+  function olelo(){
+    var a = function(){
+      Olelo('<?php echo $res."?t=".time(); ?>', 'article', false);
+    }
+    var b = function(a){
+      escss();
+    }
+    a();
+  }
+
+  function escss(){
+    return new Promise(function() {
+      var easyCss = new Escss({
+        'PREFIX_OF_BREAKPOINT': {
+          'sm-': 0,
+          'md-': 600,
+          'lg-': 960,
+          'xl-': 1200
+        },
+        'COLOR': {
+          'red': '#f00'
+        }
+      });
+      easyCss.init();
+    });
+  }
+
   </script>
 <?php endif ?>
 <?php include(dirname(__FILE__).'/footer.php'); ?>
