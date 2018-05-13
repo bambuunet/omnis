@@ -40,7 +40,7 @@
   <body>
     <header>
       <div id="logo">
-        <a data-href="/index/"><img src="/img/omnis_logo.png" alt="omnis"></a>
+        <a data-href="/index/"><img src="/img/common/omnis_logo.png" alt="omnis"></a>
       </div>
 
       <nav>
