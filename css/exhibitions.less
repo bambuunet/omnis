@@ -19,11 +19,20 @@
 @hr-color: #d3d3d4;
 
 .main, .site, .works {
+  font-family: 'OpenSans';
   position: relative;
   width: 100%;
   img {
     width: 100%;
   }
+}
+
+.place{
+  color: @black;
+  font-family: "YuGo-Medium";
+  font-size: 11px;
+  margin-top: 10px;
+  text-align: right;
 }
 
 .exhibitions_2017 {
@@ -68,12 +77,12 @@
         width: calc(45vw - 43px);
       });
       .lg({
-        margin: 104px 57px 0 0;
+        margin: 104px 54px 0 0;
         height: 165px;
         width: 250px;
       });
       .xl({
-        margin: 104px 57px 0 0;
+        margin: 104px 54px 0 0;
         height: 165px;
         width: 250px;
       });
@@ -89,10 +98,10 @@
       margin: calc(2vw - 1px) 0 0 0;
     });
     .lg({
-      margin: 56px 0 124px 0;
+      margin: 16px 0 124px 0;
     });
     .xl({
-      margin: 56px 0 124px 0;
+      margin: 16px 0 124px 0;
     });
     .img {
       display: inline-block;
@@ -120,21 +129,35 @@
         width: calc(28vw - 27px);
       });
       .lg({
-        margin: 96px 84px 0 0;
-        height: 152px;
-        width: 152px;
+        margin: 88px 42px 0 0;
+        height: 184px;
+        width: 182px;
       });
       .xl({
-        margin: 96px 84px 0 0;
-        height: 152px;
-        width: 152px;
+        margin: 88px 42px 0 0;
+        height: 184px;
+        width: 182px;
       });
     }
   }
 }
 
 .exhibitions_current{
-  .works{
-    
+  .names{
+    .name{
+      display: inline-block;
+      &:nth-child(4n+1){
+        width: 180px;
+      }
+      &:nth-child(4n+2){
+        width: 200px;
+      }
+      &:nth-child(4n+3){
+        width: 200px;
+      }
+      &:nth-child(4n){
+        width: 200px;
+      }
+    }
   }
 }

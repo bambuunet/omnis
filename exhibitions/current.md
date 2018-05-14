@@ -24,22 +24,23 @@ section.artists
     p.*f18 Toru Kaneko
 
   ## Artists
-  .name Yutaka Ishida
-  .name Mio Horie
-  .name Nobuyoshi Fukushima
-  .name Tomona Konita
-  .name Yuki Sato
-  .name Natsuki Takeuchi
-  .name Mikiko Hirayama
-  .name Ai Morikawa
-  .name Miwa Fujimoto
-  .name Miki Sugiyama
-  .name Ringo Takemura
-  .name Natsuki Kobayashi
-  .name Yuki Nonaka
-  .name Mai Muragishi
-  .name yasuda wataru
-  .name Shun Sato
+  .names
+    .name Yutaka Ishida
+    .name Mio Horie
+    .name Nobuyoshi Fukushima
+    .name Tomona Konita
+    .name Yuki Sato
+    .name Natsuki Takeuchi
+    .name Mikiko Hirayama
+    .name Ai Morikawa
+    .name Miwa Fujimoto
+    .name Miki Sugiyama
+    .name Ringo Takemura
+    .name Natsuki Kobayashi
+    .name Yuki Nonaka
+    .name Mai Muragishi
+    .name yasuda wataru
+    .name Shun Sato
 
 
   Press Release
