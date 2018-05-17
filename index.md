@@ -1,18 +1,25 @@
 .swiper-container
   ul.swiper-wrapper
     li.swiper-slide
-      [img(src="/img/artists/ToruKaneko/01m.jpg"style="max-height:432px;max-width:432px")]
+      a(href="/exhibitions/2017/")
+        [img(src="/img/artists/ToruKaneko/01m.jpg"style="max-height:432px;max-width:432px")]
     li.swiper-slide
-      [img(src="/img/artists/YukariAndo/01m.jpg"style="max-height:432px;max-width:304px")]
+      a(href="/exhibitions/2017/")
+        [img(src="/img/artists/YukariAndo/01m.jpg"style="max-height:432px;max-width:304px")]
     li.swiper-slide
-      [img.yoko(src="/img/artists/NobuyoshiFukushima/01m.jpg"style="max-height:302px;max-width:432px")]
+      a(href="/exhibitions/2017/")
+        [img.yoko(src="/img/artists/NobuyoshiFukushima/01m.jpg"style="max-height:302px;max-width:432px")]
     li.swiper-slide
-      [img.yoko(src="/img/artists/AiMorikawa/01m.jpg"style="max-height:294px;max-width:432px")]
+      a(href="/exhibitions/2017/")
+        [img(src="/img/artists/MikiSugiyama/01m.jpg"style="max-height:432px;max-width:332px")]
     li.swiper-slide
-      [img(src="/img/artists/MikiSugiyama/01m.jpg"style="max-height:432px;max-width:332px")]
+      a(href="/exhibitions/2017/")
+        [img.yoko(src="/img/artists/AiMorikawa/01m.jpg"style="max-height:294px;max-width:432px")]
     li.swiper-slide
-      [img(src="/img/artists/MikikoHirayama/01m.jpg"style="max-height:432px;max-width:315px")]
-#slideTitle.*center Exhibition 2017
+      a(href="/exhibitions/2017/")
+        [img(src="/img/artists/MikikoHirayama/01m.jpg"style="max-height:432px;max-width:315px")]
+  #slideTitle.*center
+    a(href="/exhibitions/2017/") Exhibition 2017
 
 
 script
@@ -35,5 +42,7 @@ script
         },
       });
     }, 300);
+
+
   });
 
