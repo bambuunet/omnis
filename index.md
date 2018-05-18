@@ -21,7 +21,6 @@
   #slideTitle.*center
     a(href="/exhibitions/2017/") Exhibition 2017
 
-
 script
   $$(window).on('load', function(){
     setTimeout(function(){
