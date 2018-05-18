@@ -542,6 +542,11 @@ footer {
 
  *☆*:;;;:*☆* *☆*:;;;:*☆* *☆*:;;;:*☆* *☆*:;;;:*☆* *☆*:;;;:*☆*/
 
+.show200 {
+  animation: show 1.2s ease 0s 1 forwards;
+  animation: show2 1.2s ease 1s 1 forwards;
+}
+
 .show300 {
   animation: show 0.3s ease 0s 1 forwards;
 }
@@ -553,6 +558,11 @@ footer {
 @keyframes show {
   0% {opacity:0;}
   100% {opacity:1;}
+}
+
+@keyframes show2 {
+  0% {display: block;}
+  100% {display: block; }
 }
 
 @keyframes hide {
