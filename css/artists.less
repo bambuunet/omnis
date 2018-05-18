@@ -20,14 +20,14 @@
 @font-size: 14px;
 
 section.director {
-  margin: 0 0 72px 0;
+  margin: 0 0 57px 0;
   position: relative;
   width: 100%;
 
   .imgWrap {
     display: inline-block;
     vertical-align: top;
-    padding: 44px 0 0 0;
+    padding: 24px 0 0 0;
     width: 36%;
     .sm({
       text-align: center;
@@ -44,10 +44,13 @@ section.director {
   .textWrap {
     display: inline-block;
     vertical-align: top;
-    padding: 44px 0 0 0;
-    width: 57%;
+    padding: 24px 0 0 0;
+    width: 474px;
     .sm({
       width: 100%;
+    });
+    .md({
+      width: 57%;
     });
     .name {
       font-size: 17px;
@@ -55,6 +58,7 @@ section.director {
       margin-top: -5px;
     }
     p {
+      color: #656464;
       line-height: 22px;
     }
   }
@@ -62,8 +66,14 @@ section.director {
 
 section.artists {
   h1 {
-    margin: 44px 0 0 0;
-    height: 44px;
+    margin: 56px 0 0 0;
+    height: 62px;
+  }
+  .nameOnly{
+    margin-top: -20px;
+    .wrap{
+      height: 108px;
+    }
   }
   .wrap {
     position: relative;
@@ -161,8 +171,8 @@ section.artists {
         }
         &.double {
           img{
-            margin-left: -13%;
-            width: 126%;
+            margin-left: -11.3%;
+            width: 122.6%;
           }
         }
       }
@@ -178,13 +188,26 @@ section.artists {
       }
       .name {
         display: inline-block;
-        margin: 36px 0 0 -20%;
+        margin: 30px 0 0 -20%;
         text-align: center;
         width: 140%;
         white-space: nowrap;
       }
     }
   }
+}
+
+section.photoBy{
+  .sm({
+    width: 100%;
+    });
+  width: calc(100% + 26px);
+  font-size: 9px;
+  color: #898989;
+  font-family: "OpenSans";
+  font-weight: 300;
+  text-align: right;
+  margin-bottom: 10px;
 }
 
 html.works {
@@ -369,6 +392,7 @@ html.works {
     }
   }
 }
+
 
 #popupClose {
   background: #fff;

@@ -27,7 +27,7 @@ html{
   ul{
     li {
       background: #fff;
-      width: 100vw;
+      max-width: 864px;
     }
     img {
       position: absolute;
@@ -58,15 +58,17 @@ footer {
 
 @media (min-width: 960px) and (min-height: 704px) {
   .swiper-container {
-    margin-top: calc(50vh - 352px);
-    li{
-      height: 432px;
-      img {
-        &.yoko {
-          width: 432px;
-        }
-        &:not(.yoko) {
-          height: 432px;
+    ul{
+      margin-top: calc(50vh - 352px);
+      li{
+        height: 432px;
+        img {
+          &.yoko {
+            width: 432px;
+          }
+          &:not(.yoko) {
+            height: 432px;
+          }
         }
       }
     }
@@ -79,17 +81,19 @@ footer {
 @media (min-width: 960px) and (max-height: 703px) {
   .swiper-container {
     margin-top: 0;
-    li{
-      height: calc(100vh - 272px);
-      img {
-        &.yoko {
-          max-height: calc(100vh - 272px);
-          height: 100%;
-          width: auto;
-        }
-        &:not(.yoko) {
-          height: 100%;
-          width: auto;
+    ul{
+      li{
+        height: calc(100vh - 272px);
+        img {
+          &.yoko {
+            max-height: calc(100vh - 272px);
+            height: 100%;
+            width: auto;
+          }
+          &:not(.yoko) {
+            height: 100%;
+            width: auto;
+          }
         }
       }
     }

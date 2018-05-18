@@ -1,9 +1,16 @@
-/*
-Olelo ver0.0.12
-*/
+/*ﾟ･*:.｡..｡.:*･ﾟ ﾟ･*:.｡..｡.:*･ﾟ ﾟ･*:.｡..｡.:*･ﾟ ﾟ･*:.｡..｡.:*･ﾟ
 
+  Olelo 1.1.0
+  Olelo markdown files as html.
 
-var Olelo = function(filename, target){
+  Copyright 2018- Ringo Takemura
+
+  Licensed under MIT (http://opensource.org/licenses/MIT)
+  Released on: May 1, 2018
+
+  ﾟ･*:.｡..｡.:*･ﾟ ﾟ･*:.｡..｡.:*･ﾟ ﾟ･*:.｡..｡.:*･ﾟ ﾟ･*:.｡..｡.:*･ﾟ*/
+
+var Olelo = function(filepath, id, asynchronous){
 
   'use strict';
 
@@ -15,17 +22,40 @@ var Olelo = function(filename, target){
       i = -1,
       timeStarted = new Date();
 
-  //read markdown file;
-  readFile(filename);
+  if(!checkId()) return;
+  return readFile();
 
-  function readFile(filename){
+  function checkId(){
+    var node = document.getElementById(id);
+    if(!node){
+      console.error('There is no same id in the HTML.');
+      return false;
+    }
+    return true;
+  }
+
+  function setAsynchronous(){
+    if(asynchronous === null) asynchronous = true;
+    return;
+  }
+
+  function readFile(){
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', filename);
+    xhr.open('GET', filepath, asynchronous);
     xhr.onload = function (e) {
+      if(!checkFilepath(xhr)) return false;
       makeHtml(xhr.responseText);
     }
     xhr.send();
-    return;
+    return true;
+  }
+
+  function checkFilepath(xhr){
+    if(xhr.readyState != 4 || xhr.status != 200){
+      console.error('There is incorrect markdown file path.');
+      return false;
+    }
+    return true;
   }
 
   function makeHtml(md){
@@ -69,13 +99,12 @@ var Olelo = function(filename, target){
 
     deleteLessAnchor(-1, anchorBase);
     html = html.replace(/([\s\n]*)\n/g, '\n');
-    document.getElementById(target).insertAdjacentHTML('beforeend', html);
+    document.getElementById(id).insertAdjacentHTML('beforeend', html);
     console.info('Olelo has finished. HTML was generated in ' + String(new Date() - timeStarted) + ' ms');
-    return;
+    return true;
   }
 
   function makeScript(hash){
-    var line = hash['line'];
     var indent = hash['indent'];
 
     //start
@@ -83,8 +112,7 @@ var Olelo = function(filename, target){
     while(true){
       i++;
       if(i >= mdArray.length) break;
-      line = mdArray[i]+'\n';
-
+      var line = mdArray[i]+'\n';
       var indent2 = getIndent(line, baseIndent);
       //end
       if(indent2 <= indent && line.match(/[^\s\n]+/)){
@@ -99,14 +127,13 @@ var Olelo = function(filename, target){
 
 
   function makeCommentOnlyMd(hash){
-    var line = hash['line'];
     var indent = hash['indent'];
 
     //start
     if(i >= mdArray.length) return;
     while(true){
       i++;
-      line = mdArray[i];
+      var line = mdArray[i];
       var indent2 = getIndent(line, baseIndent);
       //end
       if(indent2 <= indent && line.match(/[^\s]+/)){
@@ -118,12 +145,12 @@ var Olelo = function(filename, target){
 
 
   function makeComment(hash){
-    var line = hash['line'];
     var indent = hash['indent'];
+    var line = hash['line'];
+    line = line.replace(/\s*\/\//, '');
 
     //start
-    putHtml('--', '', getText(line, false), indent, true);
-    
+    putHtml('--', '', line, indent, true);
     if(i >= mdArray.length) return;
     while(true){
       i++;
@@ -141,30 +168,50 @@ var Olelo = function(filename, target){
   function makePre(hash){
     var line = hash['line'];
     var indent = hash['indent'];
+    var isFirstLine = true;
+    var attr = line.match(/`([^`]*)$/);
 
     //start
-    putHtml('pre', '', '', indent, true);
+    putHtml('pre', getAttr(attr[1]), '', indent, true);
+    putHtml('code', '', '', indent, true);
+
+    var RESpaceAfterOpenCode = new RegExp('(\\<code\\>)(\\s*)' + anchorBase);
+    html = html.replace(RESpaceAfterOpenCode, '$1' + anchorBase);
+
+    var RESpaceBeforeOpenCode = new RegExp('(\\>)([\\s\\n]*)(\\<code\\>)' + anchorBase);
+    html = html.replace(RESpaceBeforeOpenCode, '$1$3' + anchorBase);
+
+    var RESpaceAfterCloseCode = new RegExp('(\\</code\\>)([\\s\\n]*)' + anchorBase);
+    html = html.replace(RESpaceAfterCloseCode , '$1' + anchorBase);
+
+    var RESpaceBeforeClosePre  = new RegExp(anchorBase + '([\\s\\n]*)(\\</pre\\>)');
+    html = html.replace(RESpaceBeforeClosePre, anchorBase + '$1');
+
     i++;
     if(i >= mdArray.length) return;
     while(true){
       line = mdArray[i];
-      
       //end
       var indent2 = getIndent(line, baseIndent);
-      if(indent2 <= indent){
-        break;
-      }
+      if(indent2 < indent) break;
+      if(line.match('```')) break;
 
-      var spaceRE = new RegExp('^' + setIndent(indent + 1));
+      var spaceRE = new RegExp('^' + setIndent(indent));
       line = line.replace(spaceRE, '');
-      line = line.replace(/`([^`]+)`/, '<code>$1</code>');
+
       line = line.replace(/&/g, '&amp;');
       line = line.replace(/'/g, '&#x27;');
       line = line.replace(/`/g, '&#x60;');
       line = line.replace(/"/g, '&quot;');
       line = line.replace(/</g, '&lt;');
       line = line.replace(/>/g, '&gt;');
-      putHtmlIntoUpper(line, indent);
+      if(isFirstLine){
+        isFirstLine = false;
+        putHtmlIntoUpper(line, 0);
+      }
+      else{
+        putHtmlIntoUpper('\n' + line, 0);
+      }
       i++;
     }
   }
@@ -184,14 +231,12 @@ var Olelo = function(filename, target){
   }
 
   function makeList(hash){
-    var line = hash['line'];
     var indent = hash['indent'];
     //start
     putHtml('ul', '', '', indent, html, true);
     while(true){
-      line = mdArray[i];
-      currentType = getTagType(line);
-      if(currentType != 'list'){
+      var line = mdArray[i];
+      if(getTagType(line) != 'list'){
         break;
       }
       putHtml('li', '', getText(line, false), indent + 1, false);
@@ -200,19 +245,20 @@ var Olelo = function(filename, target){
     }
   }
 
-  function makeTable(){
-    var line = hash['line'];
+  function makeTable(hash){
     var indent = hash['indent'];
+    var line = hash['line'];
+    var attr = line.match(/\|([^\|]*)$/);
 
     //start
-    putHtml('table', getAttr(line), '', indent, true);
+    putHtml('table', getAttr(attr[1]), '', indent, true);
     deleteLessAnchor(indent+1);
     putHtml('thead', '', '', indent+1, true);
     
     //th
     while(true){
       line = mdArray[i];
-      if(line.match(/^[\|\-\n ]*$/)){
+      if(line.match(/^[\|\-]*[\s\n]*$/)){
         break;
       }
 
@@ -221,9 +267,11 @@ var Olelo = function(filename, target){
 
       var thArr = line.replace(/\s*\|\s*/g, '|');//remove spaces
       thArr = thArr.match(/\|.*(?=\|)/)[0].split('|');
-      for(var ii = 0; ii < thArr.length; ii++){
+      for(var ii = 1; ii < thArr.length; ii++){
         deleteLessAnchor(indent+3);
-        putHtml('th', '', thArr[ii], indent+3, true);
+        var text = thArr[ii].replace(/^\s+/, '').replace(/\s+$/, '');
+        text = getText(text, true);
+        putHtml('th', '', text, indent+3, true);
       }
       i++;
       if(i >= mdArray.length) break;
@@ -244,11 +292,13 @@ var Olelo = function(filename, target){
       deleteLessAnchor(indent+2);
       putHtml('tr', '', '', indent+2 , true);
 
-      var thArr = line.replace(/\s*\|\s*/, '|');//remove spaces
-      thArr = thArr.match(/\|.+(?=\|)/)[0].split('|');
-      for(var ii = 0; ii < thArr.length; ii++){
+      var trArr = line.replace(/\s*\|\s*/, '|');//remove spaces
+      trArr = trArr.match(/\|.+(?=\|)/)[0].split('|');
+      for(var ii = 1; ii < trArr.length; ii++){
         deleteLessAnchor(indent+3);
-        html = putHtml('td', '', thArr[ii], indent+3, html, true);
+        var text = trArr[ii].replace(/^\s+/, '').replace(/\s+$/, '');
+        text = getText(text, true);
+        putHtml('td', '', text, indent+3, html, true);
       }
       i++;
       if(i >= mdArray.length) break;
@@ -287,7 +337,7 @@ var Olelo = function(filename, target){
     if(line == ''){
       return 0;
     }
-    return line.match(/^ +/) ? line.match(/^ +/)[0].length / baseIndent : 0;
+    return line.match(/^\s+/) ? line.match(/^\s+/)[0].length / baseIndent : 0;
   }
 
   function setIndent(indent){
@@ -309,7 +359,7 @@ var Olelo = function(filename, target){
 
   function getAttr(line){
     var res = '';
-    line = line.replace(/^\s+/, '');
+    line = line.replace(/^\s*/, '');
 
     //tag
     var tagRE = line.match(/^(\w+)(?=(#|\.|\s|\(|\n|$))/);
@@ -348,13 +398,14 @@ var Olelo = function(filename, target){
 
 
   function getText(line, isNotTag){
-    line = line.replace(/^ +/, '');
+    line = line.replace(/^\s*/, '');
+    line = line.replace(/^[^)]+"\s[^)]+(?=\)\s)/g, '"');//delete space in (attr="attr" attr="attr")
     var text = '';
     if(isNotTag){
       text = line;
     }
     else{
-      text = line.match(/( )(.*)/);
+      text = line.match(/(\s)(.*)/);
       if(!text){
         return '';
       }
@@ -365,13 +416,13 @@ var Olelo = function(filename, target){
     text = text.replace(/  /g, '<br>');
 
     //comment only md
-    text = text.replace(/\s\/\/\-.*/, '');
+    text = text.replace(/(^|\s+)\/\/\-.*/, '');
 
     //comment
-    text = text.replace(/\s\/\/(.*)/, '<!-- $1 -->');
+    text = text.replace(/(^|\s+)\/\/(.*)/, '<!-- $2 -->');
 
     //img#aaa.bbb.ccc => <img id="aaa" class="bbb ccc">
-    text = text.replace(/\[([\w\#\-]+)\.([\w\.\-]*)\(/g, '[$1(class="$2"').replace(/\[(\w+)\#([\w\-]+)\(/, '[$1(id="$2"').replace(/class="[\w\-\.]+/g, function(){
+    text = text.replace(/\[([\w\#\-]+)\.([\w\.\-]*)\(/g, '[$1(class="$2"').replace(/\[([\w\#\-]+)\.([\w\.\-]*)/g, '[$1(class="$2")').replace(/\[(\w+)\#([\w\-]+)\(/, '[$1(id="$2"').replace(/\[(\w+)\#([\w\-]+)/, '[$1(id="$2")').replace(/class="[\w\-\.]+/g, function(){
       return arguments[0].replace(/\./g, ' ');
     });;
 
@@ -386,6 +437,10 @@ var Olelo = function(filename, target){
     //i, b...
     //[i text]
     text = text.replace(/\[(\w+) ([^\]]+)\]/g, '<$1>$2</$1>');
+
+    //span...
+    //[span]
+    text = text.replace(/\[(\w+)\]/g, '<$1></$1>');
 
     return text;
   }
@@ -415,7 +470,7 @@ var Olelo = function(filename, target){
     }
 
     //div type
-    if(line.match(/^(\.|#)\w+/)){
+    if(line.match(/^(\.|#)[^\s#]/)){
       return 'div';
     }
 

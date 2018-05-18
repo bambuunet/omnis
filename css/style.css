@@ -103,7 +103,7 @@ html.pc header {
 html.pc header #logo {
   position: absolute;
   left: 0;
-  top: 36px;
+  top: 40px;
 }
 html.pc header #logo img {
   width: 98px;
@@ -112,7 +112,7 @@ html.pc header #lang {
   color: #bbb;
   cursor: pointer;
   position: absolute;
-  right: -24px;
+  right: -20px;
   top: 12px;
 }
 html.pc header #lang .current {

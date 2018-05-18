@@ -19,7 +19,7 @@
 
 @black: #3e3a39;
 @text-color: #4c4948;
-@dark-gray: #727171;
+@dark-gray: #7d7d7d;
 @light-gray: #bbb;
 @border-color: #9fa0a0;
 @hr-color: #d3d3d4;
@@ -56,19 +56,19 @@ h1, h2 {
   font-weight: 300;
   letter-spacing: 0.025em;
   text-align: left;
-  transform: matrix(1, 0, 0, 0.9, 0, 0);
+  transform: matrix(1, 0, 0, 0.909, 0, 0);
   font-size: 1.54rem;
 }
 
 hr {
   border: solid 0.5px @hr-color;
   .lg({
-    margin-left: -28px;
-    width: 920px;
+    margin-left: -31px;
+    width: 926px;
   });
   .xl({
-    margin-left: -28px;
-    width: 920px;
+    margin-left: -31px;
+    width: 926px;
   });
 }
 
@@ -86,11 +86,13 @@ header {
   li {
     &.current {
       border-bottom: solid 1px @border-color;
+      a {
+        color: @black;
+      }
     }
     a {
       transform: matrix(1, 0, 0, 1.02, 0, 0);
     }
-    
   }
 
   a {
@@ -125,8 +127,10 @@ html.pc header{
   #lang {
     color: @light-gray;
     cursor: pointer;
+    font-size: 10px;
+    font-family: "Roboto";
     position: absolute;
-    right: -24px;
+    right: -20px;
     top: 12px;
     .current {
       color: @dark-gray;
@@ -501,6 +505,7 @@ article {
 
 footer {
   border-top: solid 1px @hr-color;
+  color: @black;
   height: 40px;
   margin: 0 20px;
   max-width: 960px;
@@ -509,6 +514,7 @@ footer {
   width: calc(100% - 40px);
 
   .copyright {
+    color: @black;
     font-size: 1.2rem;
     margin: 12px 0 0 0;
     position: absolute;
