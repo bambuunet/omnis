@@ -9,5 +9,5 @@ form(method="post"action="send.php")
     label(for="message") message
     textarea
   button(type="submit")
-    .jp 送信
-    .en Send
+    span.jp 送信
+    span.en Send

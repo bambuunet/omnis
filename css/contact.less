@@ -69,6 +69,7 @@ form {
   }
 
   button {
+    background: #fff;
     font-size: @font-size;
     height: 24px;
     margin: 60px auto 0 172px;
@@ -81,13 +82,23 @@ form {
   }
 }
 
+article{
+  height: calc(100vh - 176px);
+  padding-top: calc(50vh - 290px);
+  margin-bottom: calc(-50vh + 290px);
+
+  .sm({
+    height: calc(100vh - 138px);
+  });
+  .md({
+    height: calc(100vh - 205px);
+  });
+}
 
 footer {
   bottom: 0px;
-  position: fixed;
 
   .sm({
     margin-top: 100px;
-    position: relative;
   });
 }

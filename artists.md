@@ -38,7 +38,7 @@ section.artists
       .name Yutaka Ishida
   .wrap
     .person.imgBottom
-      .imgWrap.tate [img(src="/img/artists/taokato/01s.jpg")]
+      .imgWrap.yoko [img(src="/img/artists/taokato/03s.jpg")]
       .name tao..kato
     .person.imgBottom
       .imgWrap.tate [img(src="/img/artists/NozomuTakekawa/01s.jpg")]
@@ -50,16 +50,16 @@ section.artists
       .imgWrap.tate [img(src="/img/artists/MiwaFujimoto/01s.jpg")]
       .name Miwa Fujimoto
   .wrap
-    .person.imgBottom
+    .person.imgTop
       .imgWrap.yoko [img(src="/img/artists/YukiSato/01s.jpg")]
       .name Yuki Sato
-    .person.imgBottom
+    .person.imgTop
       .imgWrap.yoko [img(src="/img/artists/RingoTakemura/01s.jpg")]
       .name Ringo Takemura
-    .person.imgTop
+    .person.imgBottom
       .imgWrap.yoko [img(src="/img/artists/MioHorie/01s.jpg")]
       .name Mio Horie
-    .person.imgTop
+    .person.imgBottom
       .imgWrap.yoko [img(src="/img/artists/TomonaKonita/01s.jpg")]
       .name Tomona Konita
   .nameOnly
