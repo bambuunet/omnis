@@ -70,6 +70,10 @@ hr {
     margin-left: -31px;
     width: 926px;
   });
+  .md({
+    margin-left: -40px;
+    width: calc(100% + 80px);
+  });
 }
 
 
@@ -187,6 +191,7 @@ html.pc header{
             height: 20px;
             position: absolute;
             width: 180px;
+            z-index: 999;
             ul{
               background: #f7f7f7;
               display: block;
@@ -543,8 +548,7 @@ footer {
  *☆*:;;;:*☆* *☆*:;;;:*☆* *☆*:;;;:*☆* *☆*:;;;:*☆* *☆*:;;;:*☆*/
 
 .show200 {
-  animation: show 1.2s ease 0s 1 forwards;
-  animation: show2 1.2s ease 1s 1 forwards;
+  animation: show 0.2s ease 0s 1 forwards;
 }
 
 .show300 {
@@ -558,11 +562,6 @@ footer {
 @keyframes show {
   0% {opacity:0;}
   100% {opacity:1;}
-}
-
-@keyframes show2 {
-  0% {display: block;}
-  100% {display: block; }
 }
 
 @keyframes hide {

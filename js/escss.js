@@ -230,7 +230,7 @@ var Escss = function(hash){
   this.addStyle = function(cls, prefix, mediaString){
     var style = this.makeStyle(cls, prefix);
     cls = cls.replace(/([^\w\-])/g, '\\$1');
-    var ruleString = '.' + cls + '{' + style + ';}';
+    var ruleString = '.' + cls + '{' + style + ' !important;}';
     if(mediaString != null){
       ruleString = mediaString + '{' + ruleString + '}';
     }

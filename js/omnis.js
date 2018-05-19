@@ -32,12 +32,12 @@ $$(document).ready(function(){
   });
 
   $$('.pc .pulldown').on('mouseover', function(){
-    $$(this).next('div').addClass('show200');
     $$(this).next('div').css('display', 'block');
+    $$(this).next('div').addClass('show200');
   });
   $$('.pc .pulldown + div').on('mouseover', function(){
-    $$(this).addClass('show200');
     $$(this).css('display', 'block');
+    $$(this).addClass('show200');
   });
   $$('.pc .pulldown').on('mouseout', function(){
     $$(this).next('div').css('display', 'none');
