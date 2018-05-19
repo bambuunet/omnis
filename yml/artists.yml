@@ -1,53 +1,8 @@
-toru_kaneko:
+ToruKaneko:
   name: Toru Kaneko
   img:
-    - file: /img/topA1.jpg
+    - file: /img/artists/ToruKaneko/01f.jpg
       title: Dummy
-      year: 2011
-      size: 1760×1760mm
-      media: null
-    - file: /img/topB1.jpg
-      title: Espace
-      year: 2011
-      size: 1760×1760mm
-      media: null
-    - file: /img/topA1.jpg
-      title: Dummy
-      year: 2011
-      size: 1760×1760mm
-      media: null
-    - file: /img/topB1.jpg
-      title: Espace
-      year: 2011
-      size: 1760×1760mm
-      media: null
-    - file: /img/topA1.jpg
-      title: Dummy
-      year: 2011
-      size: 1760×1760mm
-      media: null
-    - file: /img/topB1.jpg
-      title: Espace
-      year: 2011
-      size: 1760×1760mm
-      media: null
-    - file: /img/topA1.jpg
-      title: Dummy
-      year: 2011
-      size: 1760×1760mm
-      media: null
-    - file: /img/topB1.jpg
-      title: Espace
-      year: 2011
-      size: 1760×1760mm
-      media: null
-    - file: /img/topA1.jpg
-      title: Dummy
-      year: 2011
-      size: 1760×1760mm
-      media: null
-    - file: /img/topB1.jpg
-      title: Espace
       year: 2011
       size: 1760×1760mm
       media: null

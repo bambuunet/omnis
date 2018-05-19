@@ -52,7 +52,7 @@ p {
 
 h1, h2 {
   color: #595757;
-  font-family: "Open Sans Condensed";
+  font-family: "Open Sans Condensed", sans-serif;
   font-weight: 300;
   text-align: left;
   transform: matrix(1, 0, 0, 0.909, 0, 0);
@@ -60,7 +60,8 @@ h1, h2 {
 }
 
 hr {
-  border: solid 0.5px @hr-color;
+  border-bottom: solid 1px @hr-color;
+  border-top: none;
   .lg({
     margin-left: -31px;
     width: 926px;
@@ -88,6 +89,9 @@ header {
   li {
     &.current {
       border-bottom: solid 1px @border-color;
+      span{
+        color: @black;
+      }
       a {
         color: @black;
       }
@@ -130,7 +134,7 @@ html.pc header{
     color: @light-gray;
     cursor: pointer;
     font-size: 10px;
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     position: absolute;
     right: -20px;
     top: 12px;
@@ -523,15 +527,13 @@ footer {
 
   .copyright {
     color: @black;
-    font-size: 1.2rem;
-    margin: 12px 0 0 0;
+    font-size: 1.0rem;
+    margin: 10px 0 0 0;
     position: absolute;
     .sm({
-      font-size: 1.0rem;
       margin: 7px 0 0 0;
     });
     .md({
-      font-size: 1.0rem;
       margin: 8px 0 0 0;
     });
   }
@@ -588,14 +590,14 @@ footer {
 
  *☆*:;;;:*☆* *☆*:;;;:*☆* *☆*:;;;:*☆* *☆*:;;;:*☆* *☆*:;;;:*☆*/
 section.photoBy{
-  .sm({
-    width: 100%;
-    });
   width: calc(100% + 26px);
   font-size: 9px;
   color: #898989;
-  font-family: "OpenSans";
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   text-align: right;
   margin-bottom: 10px;
+  .sm({
+    width: 100%;
+  });
 }

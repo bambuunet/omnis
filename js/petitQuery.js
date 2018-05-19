@@ -113,15 +113,20 @@ petitQuery.prototype = {
   attr: function(attribute, val){
     if(val === null || val === undefined){
       if(typeof attribute === 'string'){
-        return this[0].getAttribute(attribute);
-      }
-      else{
-      for(var i=0; i<this.length; i++){
-          for(var a in attribute){
-            this[i].setAttribute(a, attribute[a]);
-          }
+        try{
+          return this[0].getAttribute(attribute);
+        }
+        catch(e){
+          return null;
         }
       }
+      else{
+        for(var i=0; i<this.length; i++){
+            for(var a in attribute){
+              this[i].setAttribute(a, attribute[a]);
+            }
+          }
+        }
     }
     else{
       for(var i=0; i<this.length; i++){
@@ -152,7 +157,6 @@ petitQuery.prototype = {
   css: function(property, val){
     function setStyle(styleVal, property, val2){
       var preVal = new RegExp(property + '\\s*:[^;]+');
-console.log(preVal, property)
       if(styleVal.match(preVal)){
         return styleVal.replace(preVal, property + ':' + val2);
       }

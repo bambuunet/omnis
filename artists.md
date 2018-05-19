@@ -1,6 +1,6 @@
 section.director
   h1.lg-mt-8.xl-mt-8 Art Director / Artists
-  .imgWrap [img#toru_kaneko(src="/img/artists/ToruKaneko/01m.jpg")]
+  .imgWrap [img#ToruKaneko(src="/img/artists/ToruKaneko/01m.jpg")]
   .textWrap
     .name Toru Kaneko
     p.jp 金子透は1955年神奈川県生まれ。  1978年に武蔵野美術大学造形学部油絵学科卒業。1980年から1982年までフランスの国立美術学校（Ecole National Superieur Des Beaux-Arts）に留学。1982年から1983年まで銅版画の前衛的な研究所（ATELIER17）にてヘイターに師事。これまでの主な展覧会に、現代日本美術展、ベルエイムジュン（パリ）、ギャラリエアンドウ（渋谷松濤）をはじめ数多くの個展。その他の主な活動に、テアトル・ティポグラフィック（フランスで活躍しているエディター）とゲーテのアルマナックの本を制作（仏、ISSY LES MOULINEAUX市立図書館買上）などがある。
@@ -12,7 +12,7 @@ section.artists
   # Artists
   .wrap
     .person.imgTop
-      .imgWrap.tate [img(src="/img/artists/YukariAndo/01s.jpg")]
+      #YukariAndo.imgWrap.tate [img(src="/img/artists/YukariAndo/01s.jpg")]
       .name Yukari Ando
     .person.imgTop
       .imgWrap.yoko.double [img(src="/img/artists/NobuyoshiFukushima/01s.jpg")]
@@ -98,21 +98,21 @@ section.photoBy photo Mareo Suemasa
 
 script
   var profs = new Y2J('../yml/artists.yml');
-  
-  $$(document).ready(function(){
-    setPopup()
-  });
 
   //$$(window).on('load resize orientationchange', function(){
   $$(window).on('load', function(){
-    setPopup();
-  });
 
-  function setPopup(){
-    $$('.imgWrap').on('click', function(){
-
+    $$('.imgWrap').find('img').on('click', function(){
       var ww = $$(window).width();
       var wh = $$(window).height();
+      var name = $$(this).attr('id');
+      console.log(name);
+      if(!name) return false;
+      var prof = profs[name];
+      console.log(profs);
+      if(!prof) return false;
+      var imgs = prof['img'];
+      console.log(name);
       if(ww < wh){
         $$('html').addClass('portrait');
       }
@@ -128,13 +128,6 @@ script
         $$('html').removeClass('sm');
         $$('html').removeClass('pc');
         $$('html').addClass('works');
-
-        //var name = $$(this).attr('id');
-        var name = 'toru_kaneko';
-        if(!name) return false;
-        var prof = profs[name];
-        if(!prof) return false;
-        var imgs = prof['img'];
 
         for(var i = 0; i < imgs.length; i++){
           $$('#works .main .swiper-wrapper').append('<div class="swiper-slide">').append('<img src="' + imgs[i]['file'] + '">').after('<div class="text">' + imgs[i]['title'] + '  ' + imgs[i]['year'] + '  ' + imgs[i]['size'] + '</div>');
@@ -178,7 +171,8 @@ script
         setSizeClass();
       },300);
     });
-  } 
+
+  });
 
 
 
