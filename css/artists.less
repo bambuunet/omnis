@@ -55,11 +55,19 @@ section.director {
     .name {
       font-size: 17px;
       height: 36px;
+      letter-spacing: 0.025em;
       margin-top: -5px;
+      .sm({
+        font-size: 15px;
+      });
     }
     p {
       color: #656464;
       line-height: 22px;
+      letter-spacing: 0.005em;
+      .sm({
+        font-size: 13px;
+      });
     }
   }
 }
@@ -173,6 +181,10 @@ section.artists {
           img{
             margin-left: -11.3%;
             width: 122.6%;
+            .sm({
+              margin-left: 0%;
+              width: 100%;
+            });
           }
         }
       }
@@ -192,6 +204,11 @@ section.artists {
         text-align: center;
         width: 140%;
         white-space: nowrap;
+        .sm({
+          font-size: 1.24rem;
+          margin: 20px 0 0 -20%;
+          transform: matrix(1, 0, 0, 1.05, 0, 0);
+        });
       }
     }
   }

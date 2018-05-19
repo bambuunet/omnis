@@ -517,12 +517,26 @@ footer {
   padding: 1px 0 0 0;
   position: relative;
   width: calc(100% - 40px);
+  .sm({
+    height: 30px;
+  });
+  .md({
+    height: 33px;
+  });
 
   .copyright {
     color: @black;
     font-size: 1.2rem;
     margin: 12px 0 0 0;
     position: absolute;
+    .sm({
+      font-size: 1.0rem;
+      margin: 7px 0 0 0;
+    });
+    .md({
+      font-size: 1.0rem;
+      margin: 8px 0 0 0;
+    });
   }
 
   .social {
@@ -531,7 +545,9 @@ footer {
     right: 0;
     text-align: right;
     width: 100%;
-    
+    .md({
+      margin: 8px 0 0 0;
+    });
     li {
       display: inline;
       margin: 0 0 0 24px;

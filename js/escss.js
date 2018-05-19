@@ -205,12 +205,11 @@ var Escss = function(hash){
   }
 
   this.addStyleEachPrefix = function(){
+    this.addStyleEachClass(this.PREFIX, null);
 
     for(var i in this.BREAKPOINT){
       this.addStyleEachClass(this.BREAKPOINT[i]['prefix'], this.BREAKPOINT[i]['mediaString']);
     }
-
-    this.addStyleEachClass(this.PREFIX, null);
   }
 
   this.addStyleEachClass = function(prefix, mediaString){
