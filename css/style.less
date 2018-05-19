@@ -54,6 +54,7 @@ h1, h2 {
   color: #595757;
   font-family: "Open Sans Condensed";
   font-weight: 300;
+  letter-spacing: 0.025em;
   text-align: left;
   transform: matrix(1, 0, 0, 0.909, 0, 0);
   font-size: 1.54rem;
@@ -80,7 +81,7 @@ hr {
 
 header {
   font-family: Arial;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.025em;
 
   li {
     &.current {
@@ -541,6 +542,11 @@ footer {
 
  *☆*:;;;:*☆* *☆*:;;;:*☆* *☆*:;;;:*☆* *☆*:;;;:*☆* *☆*:;;;:*☆*/
 
+.show200 {
+  animation: show 1.2s ease 0s 1 forwards;
+  animation: show2 1.2s ease 1s 1 forwards;
+}
+
 .show300 {
   animation: show 0.3s ease 0s 1 forwards;
 }
@@ -554,6 +560,11 @@ footer {
   100% {opacity:1;}
 }
 
+@keyframes show2 {
+  0% {display: block;}
+  100% {display: block; }
+}
+
 @keyframes hide {
   0% {opacity:1;}
   100% {opacity:0;}
@@ -561,11 +572,9 @@ footer {
 
 /*☆*:;;;:*☆* *☆*:;;;:*☆* *☆*:;;;:*☆* *☆*:;;;:*☆* *☆*:;;;:*☆*
 
-      photoBy
+      photo by
 
  *☆*:;;;:*☆* *☆*:;;;:*☆* *☆*:;;;:*☆* *☆*:;;;:*☆* *☆*:;;;:*☆*/
-
-
 section.photoBy{
   .sm({
     width: 100%;
@@ -578,4 +587,3 @@ section.photoBy{
   text-align: right;
   margin-bottom: 10px;
 }
-
