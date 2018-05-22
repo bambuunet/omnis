@@ -199,20 +199,27 @@
 
       .name{
         font-size: 11px;
+        .sm({
+          font-size: 10px;
+        });
       }
       .media{
         font-size: 10px;
       }
       .size{
-        font-size: 1px;
+        font-size: 10px;
       }
     }
   }
 
   .artists{
     padding: 45px 42px 60px 42px;
+    right: 0;
+    left: 0;
+    margin: auto;
     .sm({
       padding: 0;
+      max-width: 280px;
     });
     .md({
       padding: 0;
@@ -224,18 +231,51 @@
         .name{
           display: inline-block;
           padding: 0 0 30px 0;
-          &:nth-child(4n+1){
-            width: 193px;
-          }
-          &:nth-child(4n+2){
-            width: 209px;
-          }
-          &:nth-child(4n+3){
-            width: 239px;
-          }
-          &:nth-child(4n){
-            width: 125px;
-          }
+          .sm({
+            width: 135px;
+          });
+          .md({
+            &:nth-child(4n+1){
+              width: 193px;
+            }
+            &:nth-child(4n+2){
+              width: 209px;
+            }
+            &:nth-child(4n+3){
+              width: 239px;
+            }
+            &:nth-child(4n){
+              width: 125px;
+            }
+          });
+          .lg({
+            &:nth-child(4n+1){
+              width: 193px;
+            }
+            &:nth-child(4n+2){
+              width: 209px;
+            }
+            &:nth-child(4n+3){
+              width: 239px;
+            }
+            &:nth-child(4n){
+              width: 125px;
+            }
+          });
+          .xl({
+            &:nth-child(4n+1){
+              width: 193px;
+            }
+            &:nth-child(4n+2){
+              width: 209px;
+            }
+            &:nth-child(4n+3){
+              width: 239px;
+            }
+            &:nth-child(4n){
+              width: 125px;
+            }
+          });
         }
       }
     }
