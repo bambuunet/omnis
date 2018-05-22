@@ -143,8 +143,31 @@
 }
 
 .exhibitions_current{
+  .description{
+    .sm({
+      font-size: 13px;
+    });
+    .md({
+      padding: 0;
+    });
+
+    .catch{
+      font-family:  "Yu Gothic", YuGothic;
+      font-size: 24px;
+      .sm({
+        font-size: 16px;
+      });
+    }
+  }
   .works{
     padding: 80px 0 85px 0;
+    .sm({
+      padding: 0;
+    });
+    .md({
+      padding: 0;
+    });
+
     .wrap{
       display: inline-block;
     }
@@ -167,6 +190,13 @@
     .description{
       padding: 28px 0 0 0;
       text-align: center;
+      .sm({
+        padding: 0;
+      });
+      .md({
+        padding: 0;
+      });
+
       .name{
         font-size: 11px;
       }
@@ -181,6 +211,12 @@
 
   .artists{
     padding: 45px 42px 60px 42px;
+    .sm({
+      padding: 0;
+    });
+    .md({
+      padding: 0;
+    });
 
     #artists{
       .names{
@@ -203,7 +239,9 @@
         }
       }
     }
+  }
 
-
+  .pastExhibition{
+    padding: 45px 42px 60px 42px;
   }
 }
