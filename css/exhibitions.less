@@ -103,6 +103,7 @@
     .xl({
       margin: 16px 0 124px 0;
     });
+
     .img {
       display: inline-block;
       position: relative;
@@ -168,6 +169,13 @@
       padding: 0;
     });
 
+    .wrapSp{
+      display: inline-block;
+      text-align: center;
+      .sm({
+        display: block;
+      });
+    }
     .wrap{
       display: inline-block;
     }
@@ -214,12 +222,12 @@
 
   .artists{
     padding: 45px 42px 60px 42px;
-    right: 0;
-    left: 0;
-    margin: auto;
     .sm({
       padding: 0;
       max-width: 280px;
+      right: 0;
+      left: 0;
+      margin: auto;
     });
     .md({
       padding: 0;
@@ -283,5 +291,12 @@
 
   .pastExhibition{
     padding: 45px 42px 60px 42px;
+    .sm({
+      padding: 0;
+      max-width: 280px;
+      right: 0;
+      left: 0;
+      margin: auto;
+    });
   }
 }

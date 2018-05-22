@@ -10,41 +10,51 @@ section.description.*mt25.lg-ml120.xl-ml120.lg-mr120.xl-mr120
 hr.*mt60
 
 section.works
-  .wrap.lg-w150.xl-w150
-    .img
-      img(src="/img/artists/AiMorikawa/01s.jpg")
-    .description
-      .name Ai Morikawa
-      .media charcoal on paper, 2016
-      .size 468×316mm
-  .wrap.lg-w150.xl-w150
-    .img
-      img(src="/img/artists/AiMorikawa/01s.jpg")
-    .description
-      .name Ai Morikawa
-      .media charcoal on paper, 2016
-      .size 468×316mm
-  .wrap.lg-w150.xl-w150
-    .img
-      img(src="/img/artists/AiMorikawa/01s.jpg")
-    .description
-      .name Ai Morikawa
-      .media charcoal on paper, 2016
-      .size 468×316mm
-  .wrap.lg-w154.xl-w154
-    .img
-      img(src="/img/artists/MikikoHirayama/01s.jpg")
-    .description
-      .name Mikiko Hirayama
-      .media charcoal on paper, 2016
-      .size 297×407mm
-  .wrap.lg-w154.xl-w154
-    .img
-      img(src="/img/artists/MikikoHirayama/01s.jpg")
-    .description
-      .name Mikiko Hirayama
-      .media charcoal on paper, 2016
-      .size 297×407mm
+  .wrapSp
+    .wrap.md-none.lg-none.xl-none
+      .img
+        img(src="/img/artists/ToruKaneko/01s.jpg")
+      .description
+        .name Toru Kaneko
+        .media Espace 2016, 1760×1760m
+  .wrapSp
+    .wrap.lg-w150.xl-w150
+      .img
+        img(src="/img/artists/AiMorikawa/01s.jpg")
+      .description
+        .name Ai Morikawa
+        .media charcoal on paper, 2016
+        .size 468×316mm
+    .wrap.lg-w150.xl-w150
+      .img
+        img(src="/img/artists/AiMorikawa/01s.jpg")
+      .description
+        .name Ai Morikawa
+        .media charcoal on paper, 2016
+        .size 468×316mm
+  .wrapSp
+    .wrap.lg-w150.xl-w150
+      .img
+        img(src="/img/artists/AiMorikawa/01s.jpg")
+      .description
+        .name Ai Morikawa
+        .media charcoal on paper, 2016
+        .size 468×316mm
+    .wrap.lg-w154.xl-w154
+      .img
+        img(src="/img/artists/MikikoHirayama/01s.jpg")
+      .description
+        .name Mikiko Hirayama
+        .media charcoal on paper, 2016
+        .size 297×407mm
+  .wrapSp
+    .wrap.lg-w154.xl-w154
+      .img
+        img(src="/img/artists/MikikoHirayama/01s.jpg")
+      .description
+        .name Mikiko Hirayama
+        .media charcoal on paper, 2016
+        .size 297×407mm
 
 hr
 
