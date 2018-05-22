@@ -143,21 +143,67 @@
 }
 
 .exhibitions_current{
-  .names{
-    .name{
+  .works{
+    padding: 80px 0 85px 0;
+    .wrap{
       display: inline-block;
-      &:nth-child(4n+1){
-        width: 180px;
-      }
-      &:nth-child(4n+2){
-        width: 200px;
-      }
-      &:nth-child(4n+3){
-        width: 200px;
-      }
-      &:nth-child(4n){
-        width: 200px;
+    }
+    .img{
+      height: 142px;
+      position: relative;
+      width: 100%;
+      img{
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        max-height: 142px;
+        max-width: 100%;
+        position: absolute;
+        width: auto;
       }
     }
+    .description{
+      padding: 28px 0 0 0;
+      text-align: center;
+      .name{
+        font-size: 11px;
+      }
+      .media{
+        font-size: 10px;
+      }
+      .size{
+        font-size: 1px;
+      }
+    }
+  }
+
+  .artists{
+    padding: 45px 42px 60px 42px;
+
+    #artists{
+      .names{
+        padding: 0 0 0 0;
+        .name{
+          display: inline-block;
+          padding: 0 0 30px 0;
+          &:nth-child(4n+1){
+            width: 193px;
+          }
+          &:nth-child(4n+2){
+            width: 209px;
+          }
+          &:nth-child(4n+3){
+            width: 239px;
+          }
+          &:nth-child(4n){
+            width: 125px;
+          }
+        }
+      }
+    }
+
+
   }
 }

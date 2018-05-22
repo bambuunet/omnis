@@ -10,11 +10,42 @@ section.description.*mt25.lg-ml120.xl-ml120.lg-mr120.xl-mr120
 hr.*mt60
 
 section.works
-  .wrap
+  .wrap.lg-w150.xl-w150
     .img
-    .name
-    .media
-    .size
+      img(src="/img/artists/AiMorikawa/01s.jpg")
+    .description
+      .name Ai Morikawa
+      .media charcoal on paper, 2016
+      .size 468×316mm
+  .wrap.lg-w154.xl-w154
+    .img
+      img(src="/img/artists/MikikoHirayama/01s.jpg")
+    .description
+      .name Mikiko Hirayama
+      .media charcoal on paper, 2016
+      .size 297×407mm
+  .wrap.lg-w150.xl-w150
+    .img
+      img(src="/img/artists/AiMorikawa/01s.jpg")
+    .description
+      .name Ai Morikawa
+      .media charcoal on paper, 2016
+      .size 468×316mm
+  .wrap.lg-w154.xl-w154
+    .img
+      img(src="/img/artists/MikikoHirayama/01s.jpg")
+    .description
+      .name Mikiko Hirayama
+      .media charcoal on paper, 2016
+      .size 297×407mm
+  .wrap.lg-w150.xl-w150
+    .img
+      img(src="/img/artists/AiMorikawa/01s.jpg")
+    .description
+      .name Ai Morikawa
+      .media charcoal on paper, 2016
+      .size 468×316mm
+
 
 hr
 
@@ -23,28 +54,29 @@ section.artists
     ## Art Director / Artists
     p.*f18 Toru Kaneko
 
-  ## Artists
-  .names
-    .name Yutaka Ishida
-    .name Mio Horie
-    .name Nobuyoshi Fukushima
-    .name Tomona Konita
-    .name Yuki Sato
-    .name Natsuki Takeuchi
-    .name Mikiko Hirayama
-    .name Ai Morikawa
-    .name Miwa Fujimoto
-    .name Miki Sugiyama
-    .name Ringo Takemura
-    .name Natsuki Kobayashi
-    .name Yuki Nonaka
-    .name Mai Muragishi
-    .name yasuda wataru
-    .name Shun Sato
+  #artists.sm-mt33.md-mt32
+    ## Artists
+    .names
+      .name Yutaka Ishida
+      .name Mio Horie
+      .name Nobuyoshi Fukushima
+      .name Tomona Konita
+      .name Yuki Sato
+      .name Natsuki Takeuchi
+      .name Mikiko Hirayama
+      .name Ai Morikawa
+      .name Miwa Fujimoto
+      .name Miki Sugiyama
+      .name Ringo Takemura
+      .name Natsuki Kobayashi
+      .name Yuki Nonaka
+      .name Mai Muragishi
+      .name yasuda wataru
+      .name Shun Sato
 
-
-  Press Release
-  Download (PDF)
+  #press.sm-mt44.md-mt48.lg-mt37.xl-mt37
+    ## Press Release
+    p.*f11 [a(href="#"class="*underline")Download (PDF)]
 
 hr
 
