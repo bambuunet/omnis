@@ -1,11 +1,10 @@
 ToruKaneko:
   name: Toru Kaneko
   img:
-    - file: /img/artists/ToruKaneko/01f.jpg
-      title: Dummy
-      year: 2011
-      size: 1760×1760mm
-      media: null
+    - file: /img/artists/ToruKaneko/01l.jpg
+      description: Espace, 2016, acrylic on panel, 1760×1760mm
+    - file: /img/artists/ToruKaneko/02l.jpg
+      description: Espace, 2016, acrylic on panel, 1760×1760mm
   prof:
     - title: Profile
       history:
@@ -13,4 +12,116 @@ ToruKaneko:
           text: 武蔵野美術大学造形学部油絵学科卒業
         - year: "'80-'82"
           text: フランスの国立美術学校（Ecole National Superieur Des Beaux-Arts）に留学
+YukariAndo:
+  name: Yukari Ando
+  img:
+    - file: /img/artists/YukariAndo/01l.jpg
+      description: 2016, pencil on paper, 1085×765mm
+NobuyoshiFukushima:
+  name: Nobuyoshi Fukushima
+  img:
+    - file: /img/artists/NobuyoshiFukushima/01l.jpg
+      description: 2016, charcoal on paper, 542×382mm
+    - file: /img/artists/NobuyoshiFukushima/02l.jpg
+      description: 2016, charcoal on paper, 382×495mm
+    - file: /img/artists/NobuyoshiFukushima/03l.jpg
+      description: 2017, charcoal on paper, 158x227mm
+AiMorikawa:
+  name: 
+  img:
+    - file: /img/artists/AiMorikawa/01l.jpg
+      description: 2016, charcoal on paper, 316×468mm
+    - file: /img/artists/AiMorikawa/02l.jpg
+      description: 2016, charcoal on paper, 542×790mm
+MikiSugiyama:
+  name: Miki Sugiyama
+  img:
+    - file: /img/artists/MikiSugiyama/01l.jpg
+      description: 2016, charcoal on paper, 650×500mm
+    - file: /img/artists/MikiSugiyama/02l.jpg
+      description: 2016, charcoal on paper, 363×256mm
+    - file: /img/artists/MikiSugiyama/03l.jpg
+      description: 2016, acrylic on paper, 363×256mm
+NatsukiTakeuchi:
+  name: Natsuki Takeuchi
+  img:
+    - file: /img/artists/NatsukiTakeuchi/01l.jpg
+      description: 2016, oil on canvas, 333×242mm
+    - file: /img/artists/NatsukiTakeuchi/02l.jpg
+      description: 2016, oil on canvas, 333×242mm
+MikikoHirayama:
+  name: Mikiko Hirayama
+  img:
+    - file: /img/artists/MikikoHirayama/01l.jpg
+      description: 2016, charcoal on paper, 407×297mm
+    - file: /img/artists/MikikoHirayama/02l.jpg
+      description: 2016, charcoal on paper, 407×297mm
+MamikoNiinuma:
+  name: Mamiko Niinuma
+  img:
+    - file: /img/artists/MamikoNiinuma/01l.jpg
+      description: 2015, colored pencil on paper, 515×364mm
+    - file: /img/artists/MamikoNiinuma/02l.jpg
+      description: 2015, colored pencil on paper, 515×364mm
+YutakaIshida:
+  name: Yutaka Ishida
+  img:
+    - file: /img/artists/YutakaIshida/01l.jpg
+      description: 2014, acrylic on canvas, 727×500mm
+taokato:
+  name: tao..kato
+  img:
+    - file: /img/artists/taokato/01l.jpg
+      description: 2017, acrylic on panel, 530×333mm
+    - file: /img/artists/taokato/02l.jpg
+      description: 2017, acrylic on panel, 530×333mm
+    - file: /img/artists/taokato/03l.jpg
+      description: 2018, acrylic, silver leaf on panel, 210×297mm
+KazuakiKaneda:
+  name: Kazuaki Kaneda
+  img:
+    - file: /img/artists/KazuakiKaneda/01l.jpg
+      description: 2015, acrylic on panel, 180x180mm
+MiwaFujimoto:
+  name: Miwa Fujimoto
+  img:
+    - file: /img/artists/MiwaFujimoto/01l.jpg
+      description: 2017, acrylic on canvas, 415×320mm
+    - file: /img/artists/MiwaFujimoto/02l.jpg
+      description: 2017, acrylic on canvas, 227×158mm                  
+    - file: /img/artists/MiwaFujimoto/03l.jpg
+      description: 2015, acrylic on wooden board, 293×225mm
+YukiSato:
+  name: Yuki Sato
+  img:
+    - file: /img/artists/YukiSato/01l.jpg
+      description: 2016, acrylic on paper, 158x227mm
+    - file: /img/artists/YukiSato/02l.jpg
+      description: 2016, acrylic on paper, 158x227mm
+RingoTakemura:
+  name: Ringo Takemura
+  img:
+    - file: /img/artists/RingoTakemura/01l.jpg
+      description:  2017, acrylic on paper, 158×227mm
+    - file: /img/artists/RingoTakemura/02l.jpg
+      description:  2017, acrylic on paper, 158×227mm
+MioHorie:
+  name: Mio Horie
+  img:
+    - file: /img/artists/MioHorie/01l.jpg
+      description: 2016, acrylic on board, 158×227mm
+TomonaKonita:
+  name: Tomona Konita
+  img:
+    - file: /img/artists/TomonaKonita/01l.jpg
+      description: 2015, mixed media, 250×420×210mm
+    - file: /img/artists/TomonaKonita/02l.jpg
+      description: 2017, acrylic on paper, 158×227mm
+    - file: /img/artists/TomonaKonita/03l.jpg
+      description: 2017, acrylic on paper, 158×227mm
+NozomuTakekawa:
+  name: Nozomu Takekawa
+  img:
+    - file: /img/artists/NozomuTakekawa/01l.jpg
+      description: 
 

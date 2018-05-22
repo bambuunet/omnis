@@ -15,13 +15,13 @@ section.artists
       #YukariAndo.imgWrap.tate [img(src="/img/artists/YukariAndo/01s.jpg")]
       .name Yukari Ando
     .person.imgTop
-      .imgWrap.yoko.double [img(src="/img/artists/NobuyoshiFukushima/01s.jpg")]
+      #NobuyoshiFukushima.imgWrap.yoko.double [img(src="/img/artists/NobuyoshiFukushima/01s.jpg")]
       .name Nobuyoshi Fukushima
     .person.imgBottom
-      .imgWrap.yoko [img(src="/img/artists/AiMorikawa/01s.jpg")]
+      #AiMorikawa.imgWrap.yoko [img(src="/img/artists/AiMorikawa/01s.jpg")]
       .name Ai Morikawa
     .person.imgBottom
-      .imgWrap.tate [img(src="/img/artists/MikiSugiyama/01s.jpg")]
+      #MikiSugiyama.imgWrap.tate [img(src="/img/artists/MikiSugiyama/01s.jpg")]
       .name Miki Sugiyama
   .wrap
     .person.imgBottom
@@ -109,10 +109,8 @@ script
       console.log(name);
       if(!name) return false;
       var prof = profs[name];
-      console.log(profs);
       if(!prof) return false;
       var imgs = prof['img'];
-      console.log(name);
       if(ww < wh){
         $$('html').addClass('portrait');
       }
@@ -130,7 +128,7 @@ script
         $$('html').addClass('works');
 
         for(var i = 0; i < imgs.length; i++){
-          $$('#works .main .swiper-wrapper').append('<div class="swiper-slide">').append('<img src="' + imgs[i]['file'] + '">').after('<div class="text">' + imgs[i]['title'] + '  ' + imgs[i]['year'] + '  ' + imgs[i]['size'] + '</div>');
+          $$('#works .main .swiper-wrapper').append('<div class="swiper-slide">').append('<img src="' + imgs[i]['file'] + '">').after('<div class="text">' + imgs[i]['description'] + '</div>');
           $$('#works .thumbnail .swiper-wrapper').append('<div class="swiper-slide">').append('<img src="' + imgs[i]['file'] + '">');
         }
         $$('#works .name').text(prof['name']);
