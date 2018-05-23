@@ -166,7 +166,6 @@ script
         $$('html').removeClass('works');
         $$('html').removeClass('biography');
         $$('.popup').css('display', 'none');
-        setSizeClass();
       },300);
     });
 
