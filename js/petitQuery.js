@@ -1,5 +1,5 @@
 /*
-petit query var0.1.5
+petit query var0.1.6
 取得は最初の1個(parent,children,prev...)
 操作は全て(wrap)
 
@@ -147,12 +147,24 @@ petitQuery.prototype = {
   },
   children: function(selector){
     var nodes = [];
-    var children = this[0].children;
-    for(var i=0; i<children.length; i++){
-      if(selector && !$$.checkSameSelector(children[i], selector)) continue;
-      nodes.push(children[i]);
+    for(var i=0; i<this.length; i++){
+      var children = this[i].children;
+      for(var ii=0; ii<children.length; ii++){
+        if(selector && !$$.checkSameSelector(children[ii], selector)) continue;
+        nodes.push(children[ii]);
+      }
     }
     return $$.clone(nodes);
+
+    var arr = [];
+    for(var i=0; i<this.length; i++){
+      var find = $$.query(this[i], selector);
+      for(var ii=0; ii<find.length; ii++){
+        arr.push(find[ii]);
+      }
+    }
+    return $$.clone(arr);
+
   },
   css: function(property, val){
     function setStyle(styleVal, property, val2){
@@ -208,7 +220,14 @@ petitQuery.prototype = {
     return $$(this[this.length + num]);
   },
   find: function(selector){
-    return $$.clone($$.query(this[0], selector));
+    var arr = [];
+    for(var i=0; i<this.length; i++){
+      var find = $$.query(this[i], selector);
+      for(var ii=0; ii<find.length; ii++){
+        arr.push(find[ii]);
+      }
+    }
+    return $$.clone(arr);
   },
   first: function(selector){
     if(selector === null || selector === undefined || $$.checkSameSelector(this[0], selector)) return $$(this[0]);
