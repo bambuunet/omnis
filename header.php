@@ -13,8 +13,8 @@
     <?php elseif(preg_match('/artists/', $url)): ?>
     <script type="text/javascript" src="/js/swiper.js"></script>
     <link rel="stylesheet/less" href="/css/swiper.css">
-    <script type="text/javascript" src="/js/y2j.js?t=<?= time(); ?>"></script>
-    <link rel="stylesheet/less" href="/css/artists.less?t=<?= time(); ?>">
+    <script type="text/javascript" src="/js/y2j.js?a=<?= time(); ?>"></script>
+    <link rel="stylesheet/less" href="/css/artists.less?a=<?= time(); ?>">
     <?php elseif(preg_match('/about/', $url)): ?>
     <link rel="stylesheet/less" href="/css/about.less?t=<?= time(); ?>">
     <?php elseif(preg_match('/essay/', $url)): ?>
@@ -27,14 +27,14 @@
     <link rel="stylesheet/less" href="/css/top.less?t=<?= time(); ?>">
     <?php endif; ?>
 
-    <script type="text/javascript" src="/js/petitQuery.js?t=<?= time(); ?>"></script>
+    <script type="text/javascript" src="/js/petitQuery.js?a=<?= time(); ?>"></script>
     
-    <script type="text/javascript" src="/js/olelo.js?t=<?= time(); ?>"></script>
-    <script type="text/javascript" src="/js/haole.js?t=<?= time(); ?>"></script>
-    <script type="text/javascript" src="/js/escss.js?t=<?= time(); ?>"></script>
-    <script type="text/javascript" src="/js/center.js?t=<?= time(); ?>"></script>
+    <script type="text/javascript" src="/js/olelo.js"></script>
+    <script type="text/javascript" src="/js/haole.js"></script>
+    <script type="text/javascript" src="/js/escss.js"></script>
+    <script type="text/javascript" src="/js/center.js"></script>
     <script type="text/javascript" src="/js/less.min.js"></script>
-    <script type="text/javascript" src="/js/omnis.js?t=<?= time(); ?>"></script>
+    <script type="text/javascript" src="/js/omnis.js"></script>
     <title>omnis</title>
   </head>
   <body>
