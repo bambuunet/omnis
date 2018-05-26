@@ -1,5 +1,5 @@
 /*
-petit query var0.1.6
+petit query var0.1.7
 取得は最初の1個(parent,children,prev...)
 操作は全て(wrap)
 
@@ -253,9 +253,9 @@ petitQuery.prototype = {
     return false;
   },
   height: function(){
-    if(this[0].style && this[0].style.height) return this[0].style.height;
-    if(this[0].clientHeight) return this[0].clientHeight;
-    if(this[0].innerHeight) return this[0].innerHeight;
+    if(this[0].style && this[0].style.height && typeof(this[0].style.height) == 'number' && this[0].style.height > 0) return this[0].style.height;
+    if(this[0].clientHeight && this[0].clientHeight > 0) return this[0].clientHeight;
+    if(this[0].innerHeight && this[0].innerHeight > 0) return this[0].innerHeight;
     return 0;
   },
   html: function(context){
@@ -409,9 +409,9 @@ petitQuery.prototype = {
     return this;
   },
   width: function(){
-    if(this[0].style && this[0].style.width) return this[0].style.width;
-    if(this[0].clientWidth) return this[0].clientWidth;
-    if(this[0].innerWidth) return this[0].innerWidth;
+    if(this[0].style && this[0].style.width && typeof(this[0].style.width) == 'number' && this[0].style.width > 0) return this[0].style.width;
+    if(this[0].clientWidth && this[0].clientWidth > 0) return this[0].clientWidth;
+    if(this[0].innerWidth && this[0].innerWidth > 0) return this[0].innerWidth;
     return 0;
   },
   wrap: function(context){

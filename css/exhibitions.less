@@ -333,14 +333,31 @@ html.works {
     max-width: 696px;
     max-height: 696px;
     height: calc(100vh - 64px);
+    width: calc(100vw - 96px);
     bottom: 0;
     top: 0;
     right: 0;
     left: 0;
     margin: auto;
     position: absolute;
+    .sm({
+      max-width: calc(100vw - 20px);
+      max-height: calc(100vh - 130px);
+      height: calc(100vh - 130px);
+      width: calc(100vw - 20px);
+    });
   }
 
+  #workImgWrap{
+    text-align: right;
+    right: 0;
+    margin: auto;
+  }
+
+  #workName{
+    font-size: 1.0rem;
+    position: absolute;
+  }
 }
 
 
