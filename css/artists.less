@@ -34,6 +34,7 @@ section.director {
       width: 100%;
     });
     img {
+      cursor: pointer;
       margin: 0 0 0 20%;
       width: 63%;
       .sm({
@@ -153,6 +154,7 @@ section.artists {
           width: 155px;
         });
         img {
+          cursor: pointer;
           left: 0;
           bottom: 0;
           top: 0;
@@ -300,6 +302,7 @@ html.works {
       opacity: 1;
     }
     img{
+      cursor: pointer;
       position: absolute;
       bottom: 0;
       top: 0;
@@ -311,6 +314,7 @@ html.works {
     }
     .swiper-button-prev{
       background: #fff;
+      cursor: pointer;
       top: 0;
       bottom: 0;
       margin: auto;
@@ -318,9 +322,12 @@ html.works {
       width: 2vh;
       background-size: cover;
       left: 0;
+      &.swiper-button-disabled{
+        cursor: default;
+      }
       div {
         display: inline-block;
-        height: 2px;
+        height: 1px;
         width: 1.4vh;
         background-color: @dark-gray;
         margin: 0;
@@ -334,7 +341,7 @@ html.works {
         }
         &:nth-of-type(2) {
           transform: rotate(45deg);
-          top: 3.5vh;
+          top: 3.4vh;
         }
       }
     }
@@ -349,7 +356,7 @@ html.works {
       right: 0;
       div {
         display: inline-block;
-        height: 2px;
+        height: 1px;
         width: 1.4vh;
         background-color: @dark-gray;
         margin: 0;
@@ -363,7 +370,7 @@ html.works {
         }
         &:nth-of-type(2) {
           transform: rotate(-45deg);
-          top: 3.5vh;
+          top: 3.4vh;
         }
       }
     }
@@ -384,6 +391,7 @@ html.works {
       font-size: 16px;
       position: absolute;
       top: 68.3vh;
+      z-index: 9999;
     }
     .page-button{
       bottom: 6.8vh;

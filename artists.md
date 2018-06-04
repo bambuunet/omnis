@@ -12,55 +12,71 @@ section.artists
   # Artists
   .wrap
     .person.imgTop
-      #YukariAndo.imgWrap.tate [img(src="/img/artists/YukariAndo/01s.jpg")]
+      .imgWrap.tate
+        img#YukariAndo(src="/img/artists/YukariAndo/01s.jpg")
       .name Yukari Ando
     .person.imgTop
-      #NobuyoshiFukushima.imgWrap.yoko.double [img(src="/img/artists/NobuyoshiFukushima/01s.jpg")]
+      .imgWrap.yoko.double
+        img#NobuyoshiFukushima(src="/img/artists/NobuyoshiFukushima/01s.jpg")
       .name Nobuyoshi Fukushima
     .person.imgBottom
-      #AiMorikawa.imgWrap.yoko [img(src="/img/artists/AiMorikawa/01s.jpg")]
+      .imgWrap.yoko
+        img#AiMorikawa(src="/img/artists/AiMorikawa/01s.jpg")
       .name Ai Morikawa
     .person.imgBottom
-      #MikiSugiyama.imgWrap.tate [img(src="/img/artists/MikiSugiyama/01s.jpg")]
+      .imgWrap.tate
+        img#MikiSugiyama(src="/img/artists/MikiSugiyama/01s.jpg")
       .name Miki Sugiyama
   .wrap
     .person.imgBottom
-      .imgWrap.tate [img(src="/img/artists/NatsukiTakeuchi/01s.jpg")]
+      .imgWrap.tate
+        img#NatsukiTakeuchi(src="/img/artists/NatsukiTakeuchi/01s.jpg")
       .name Natsuki Takeuchi
     .person.imgBottom
-      .imgWrap.tate [img(src="/img/artists/MikikoHirayama/01s.jpg")]
+      .imgWrap.tate
+        img#MikikoHirayama(src="/img/artists/MikikoHirayama/01s.jpg")
       .name Mikiko Hirayama
     .person.imgTop
-      .imgWrap.tate [img(src="/img/artists/MamikoNiinuma/01s.jpg")]
+      .imgWrap.tate
+        img#MamikoNiinuma(src="/img/artists/MamikoNiinuma/01s.jpg")
       .name Mamiko Niinuma
     .person.imgTop
-      .imgWrap.tate [img(src="/img/artists/YutakaIshida/01s.jpg")]
+      .imgWrap.tate
+        img#YutakaIshida(src="/img/artists/YutakaIshida/01s.jpg")
       .name Yutaka Ishida
   .wrap
     .person.imgBottom
-      .imgWrap.yoko [img(src="/img/artists/taokato/03s.jpg")]
+      .imgWrap.yoko
+        img#taokato(src="/img/artists/taokato/03s.jpg")
       .name tao..kato
     .person.imgBottom
-      .imgWrap.tate [img(src="/img/artists/NozomuTakekawa/01s.jpg")]
+      .imgWrap.tate
+        img#NozomuTakekawa(src="/img/artists/NozomuTakekawa/01s.jpg")
       .name Nozomu Takekawa
     .person.imgTop
-      .imgWrap.shikaku [img(src="/img/artists/KazuakiKaneda/01s.jpg")]
+      .imgWrap.shikaku
+        img#KazuakiKaneda(src="/img/artists/KazuakiKaneda/01s.jpg")
       .name Kazuaki Kaneda
     .person.imgTop
-      .imgWrap.tate [img(src="/img/artists/MiwaFujimoto/01s.jpg")]
+      .imgWrap.tate
+        img#MiwaFujimoto(src="/img/artists/MiwaFujimoto/01s.jpg")
       .name Miwa Fujimoto
   .wrap
     .person.imgTop
-      .imgWrap.yoko [img(src="/img/artists/YukiSato/01s.jpg")]
+      .imgWrap.yoko
+        img#YukiSato(src="/img/artists/YukiSato/01s.jpg")
       .name Yuki Sato
     .person.imgTop
-      .imgWrap.yoko [img(src="/img/artists/RingoTakemura/01s.jpg")]
+      .imgWrap.yoko
+        img#RingoTakemura(src="/img/artists/RingoTakemura/01s.jpg")
       .name Ringo Takemura
     .person.imgBottom
-      .imgWrap.yoko [img(src="/img/artists/MioHorie/01s.jpg")]
+      .imgWrap.yoko
+        img#MioHorie(src="/img/artists/MioHorie/01s.jpg")
       .name Mio Horie
     .person.imgBottom
-      .imgWrap.yoko [img(src="/img/artists/TomonaKonita/01s.jpg")]
+      .imgWrap.yoko
+        img#TomonaKonita(src="/img/artists/TomonaKonita/01s.jpg")
       .name Tomona Konita
   .nameOnly
     .wrap
@@ -95,7 +111,6 @@ section.photoBy photo Mareo Suemasa
 
 #biography.popup
 
-
 script
   var profs = new Y2J('../yml/artists.yml');
 
@@ -106,7 +121,7 @@ script
       var ww = $$(window).width();
       var wh = $$(window).height();
       var name = $$(this).attr('id');
-      console.log(name);
+      
       if(!name) return false;
       var prof = profs[name];
       if(!prof) return false;
@@ -126,6 +141,8 @@ script
         $$('html').removeClass('sm');
         $$('html').removeClass('pc');
         $$('html').addClass('works');
+        $$('#works .main .swiper-wrapper').empty();
+        $$('#works .thumbnail .swiper-wrapper').empty();
 
         for(var i = 0; i < imgs.length; i++){
           $$('#works .main .swiper-wrapper').append('<div class="swiper-slide">').append('<img src="' + imgs[i]['file'] + '">').after('<div class="text">' + imgs[i]['description'] + '</div>');
