@@ -247,16 +247,26 @@ html.works {
     max-width: 61vh;
     height: 76vh;
     top: 10vh;
+    .sm({
+      max-height: 400px;
+      top: 65px;
+    });
 
     .swiper-wrapper{
       margin: auto;
       right: 0;
       left: 0;
+      .sm({
+        height: 400px;
+      });
     }
     .swiper-slide {
       background: #fff;
       height: 61vh;
       width: 62vh;
+      .sm({
+        height: 280px;
+      });
     }
     img {
       max-width: 61vh;
@@ -267,6 +277,10 @@ html.works {
       left: 0;
       margin: auto;
       position: absolute;
+      .sm({
+        max-height: 280px;
+        max-width: calc(100vw - 40px);
+      });
     }
     .text {
       background: #fff;
@@ -276,6 +290,11 @@ html.works {
       text-align: center;
       width: 61vh;
       bottom: -11vh;
+      .sm({
+        position: relative;
+        top: 340px;
+        width: 100vw;
+      });
     }
   }
 
@@ -286,16 +305,30 @@ html.works {
     bottom: 6.7vh;
     width: 45vh;
     padding: 0 2.5vh 0 2.5vh;
+    .sm({
+      top: 442px;
+      bottom: auto;
+      height: 9.7vh;
+      width: 33vh;
+    });
 
     .swiper-wrapper{
       margin-left: -40%;
       width: 45vh;
+      .sm({
+        margin-left: -36%;
+        width: 33vh;
+      });
     }
     .swiper-slide {
       cursor: pointer;
       height: 6.7vh;
       width: 6.7vh;
       opacity: 0.5;
+      .sm({
+        height: 9.7vh;
+        width: 9.7vh;
+      });
     }
     .swiper-slide-active {
       position: relative;
@@ -308,9 +341,13 @@ html.works {
       top: 0;
       right: 0;
       left: 0;
-      margin: auto 0;
+      margin: auto ;
       max-height: 6.7vh;
       max-width: 6.7vh;
+      .sm({
+        max-height: 9.7vh;
+        max-width: 9.7vh;
+      });
     }
     .swiper-button-prev{
       background: #fff;
@@ -322,6 +359,9 @@ html.works {
       width: 2vh;
       background-size: cover;
       left: 0;
+      .sm({
+        height: 9.7vh;
+      });
       &.swiper-button-disabled{
         cursor: default;
       }
@@ -338,10 +378,16 @@ html.works {
         &:nth-of-type(1) {
           transform: rotate(-45deg);
           top: 2.5vh;
+          .sm({
+            top: 4.3vh;
+          });
         }
         &:nth-of-type(2) {
           transform: rotate(45deg);
           top: 3.4vh;
+          .sm({
+            top: 5.2vh;
+          });
         }
       }
     }
@@ -354,6 +400,9 @@ html.works {
       width: 2vh;
       background-size: cover;
       right: 0;
+      .sm({
+        height: 9.7vh;
+      });
       div {
         display: inline-block;
         height: 1px;
@@ -367,10 +416,16 @@ html.works {
         &:nth-of-type(1) {
           transform: rotate(45deg);
           top: 2.5vh;
+          .sm({
+            top: 4.3vh;
+          });
         }
         &:nth-of-type(2) {
           transform: rotate(-45deg);
           top: 3.4vh;
+          .sm({
+            top: 5.2vh;
+          });
         }
       }
     }
@@ -387,22 +442,78 @@ html.works {
     position: absolute;
     margin: 0 0 0 65px;
     width: 300px;
+    .sm({
+      margin: 0;
+      width: 100vw;
+    });
+
     .name{
       font-size: 16px;
       position: absolute;
       top: 68.3vh;
       z-index: 9999;
+      .sm({
+        text-align: center;
+        top: 382px;
+        width: 100vw;
+      });
     }
     .page-button{
       bottom: 6.8vh;
       font-size: 13px;
       font-weight: 400;
       position: absolute;
+      .sm({
+        border-top: solid 1px @border-color;
+        height: 46px;
+        bottom: 0;
+        width: 100vw;
+      });
+
       .off {
         color: @border-color;
         cursor: pointer;
       }
+
+      .page-button-works{
+        .sm({
+          font-size: 12px;
+          position: absolute;
+          top: 13px;
+          left: 0;
+          right: 130px;
+          text-align: center;
+        });
+      }
+      .page-button-biography{
+        .sm({
+          font-size: 12px;
+          position: absolute;
+          top: 13px;
+          left: 130px;
+          right: 0;
+          text-align: center;
+        });
+      }
+      .page-button-border{
+        .sm({
+          height: 10px;
+          border-left: solid 1px @border-color;
+          top: 17px;
+          left: 0;
+          right: 0;
+          text-align: center;
+          margin: auto;
+          width: 0;
+        });
+      }
     }
+  }
+}
+
+.sm.works{
+  #hamburger{
+    display: none;
   }
 }
 
@@ -428,6 +539,10 @@ html.works {
     position: absolute;
     right: 32px;
     top: 32px;
+    .sm({
+      right: 12px;
+      top: 28px;
+    });
 
     &:nth-of-type(1) {
       transform: rotate(45deg);

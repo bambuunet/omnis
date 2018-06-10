@@ -93,8 +93,9 @@ section.photoBy photo Mareo Suemasa
     .left-block
       .name
       .page-button
-        div Works
-        div.off Biography
+        span.page-button-works Works
+        span.page-button-biography.off Biography
+        div.page-button-border
 
     .main.swiper-container
       .swiper-wrapper
@@ -133,14 +134,13 @@ script
         $$('html').removeClass('portrait');
       }
 
+      var thumbnailNum = 5;
+      if(ww < 768){
+        thumbnailNum = 3;
+      }
+
       $$('body').addClass('hide300');
       setTimeout(function(){
-        $$('body').addClass('show300').removeClass('hide300');
-
-        $$('html').removeClass('menu');
-        $$('html').removeClass('sm');
-        $$('html').removeClass('pc');
-        $$('html').addClass('works');
         $$('#works .main .swiper-wrapper').empty();
         $$('#works .thumbnail .swiper-wrapper').empty();
 
@@ -148,29 +148,39 @@ script
           $$('#works .main .swiper-wrapper').append('<div class="swiper-slide">').append('<img src="' + imgs[i]['file'] + '">').after('<div class="text">' + imgs[i]['description'] + '</div>');
           $$('#works .thumbnail .swiper-wrapper').append('<div class="swiper-slide">').append('<img src="' + imgs[i]['file'] + '">');
         }
-        $$('#works .name').text(prof['name']);
 
-        var main = new Swiper ('#works .main', {
-          spaceBetween: 10,
-          effect: 'fade',
+        $$('img').on('load', function(){
+          setTimeout(function(){
+
+            $$('#works .name').text(prof['name']);
+
+            var main = new Swiper ('#works .main', {
+              spaceBetween: 10,
+              effect: 'fade',
+            });
+
+            var thumbnail = new Swiper('#works .thumbnail', {
+              spaceBetween: 10,
+              centeredSlides: true,
+              slidesPerView: thumbnailNum,
+              slideToClickedSlide: true,
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+            });
+            main.controller.control = thumbnail;
+            thumbnail.controller.control = main;
+            $$('#works').css('display', 'block');
+            $$('body').addClass('show300').removeClass('hide300');
+            $$('html').removeClass('menu');
+            $$('html').removeClass('sm');
+            $$('html').removeClass('pc');
+            $$('html').addClass('works');
+          }, 50);
         });
 
-        var thumnail = new Swiper('#works .thumbnail', {
-          spaceBetween: 10,
-          centeredSlides: true,
-          slidesPerView: 5,
-          slideToClickedSlide: true,
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-        });
-        main.controller.control = thumnail;
-        thumnail.controller.control = main;
-
-        $$('#works').css('display', 'block');
-
-      },300);
+      },50);
     });
 
     $$('#popupClose').on('click', function(){
