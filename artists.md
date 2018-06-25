@@ -145,12 +145,22 @@ script
         $$('#works .thumbnail .swiper-wrapper').empty();
 
         for(var i = 0; i < imgs.length; i++){
-          $$('#works .main .swiper-wrapper').append('<div class="swiper-slide">').append('<img src="' + imgs[i]['file'] + '">').after('<div class="text">' + imgs[i]['description'] + '</div>');
+          $$('#works .main .swiper-wrapper').append('<div class="swiper-slide">').append('<img src="' + imgs[i]['file'] + '" class="img' + i + '">').after('<div class="text">' + imgs[i]['description'] + '</div>');
           $$('#works .thumbnail .swiper-wrapper').append('<div class="swiper-slide">').append('<img src="' + imgs[i]['file'] + '">');
         }
 
         $$('img').on('load', function(){
           setTimeout(function(){
+            for(var i = 0; i < imgs.length; i++){
+              var imgw = $$('.img' + i).width();
+              var imgh = $$('.img' + i).height();
+              if(imgw > imgh){
+                $$('.img' + i).addClass('yoko');
+              }
+              else if(imgw < imgh){
+                $$('.img' + i).addClass('tate');
+              }
+            }
 
             $$('#works .name').text(prof['name']);
 

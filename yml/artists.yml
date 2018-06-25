@@ -45,9 +45,9 @@ MikiSugiyama:
 NatsukiTakeuchi:
   name: Natsuki Takeuchi
   img:
-    - file: /img/artists/NatsukiTakeuchi/01l.jpg
-      description: 2016, oil on canvas, 333×242mm
     - file: /img/artists/NatsukiTakeuchi/02l.jpg
+      description: 2016, oil on canvas, 333×242mm
+    - file: /img/artists/NatsukiTakeuchi/01l.jpg
       description: 2016, oil on canvas, 333×242mm
 MikikoHirayama:
   name: Mikiko Hirayama
@@ -71,12 +71,12 @@ YutakaIshida:
 taokato:
   name: tao..kato
   img:
-    - file: /img/artists/taokato/01l.jpg
-      description: 2017, acrylic on panel, 530×333mm
-    - file: /img/artists/taokato/02l.jpg
-      description: 2017, acrylic on panel, 530×333mm
     - file: /img/artists/taokato/03l.jpg
       description: 2018, acrylic, silver leaf on panel, 210×297mm
+    - file: /img/artists/taokato/02l.jpg
+      description: 2017, acrylic on panel, 530×333mm
+    - file: /img/artists/taokato/01l.jpg
+      description: 2017, acrylic on panel, 530×333mm
 KazuakiKaneda:
   name: Kazuaki Kaneda
   img:
