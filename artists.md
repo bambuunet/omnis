@@ -30,7 +30,7 @@ section.artists
   .wrap
     .person.imgBottom
       .imgWrap.tate
-        img#NatsukiTakeuchi(src="/img/artists/NatsukiTakeuchi/01s.jpg")
+        img#NatsukiTakeuchi(src="/img/artists/NatsukiTakeuchi/02s.jpg")
       .name Natsuki Takeuchi
     .person.imgBottom
       .imgWrap.tate
