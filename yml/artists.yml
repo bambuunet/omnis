@@ -82,6 +82,8 @@ KazuakiKaneda:
   img:
     - file: /img/artists/KazuakiKaneda/01l.jpg
       description: 2015, acrylic on panel, 180x180mm
+      max-width: 350
+      max-height: 350
 MiwaFujimoto:
   name: Miwa Fujimoto
   img:
@@ -124,4 +126,5 @@ NozomuTakekawa:
   img:
     - file: /img/artists/NozomuTakekawa/01l.jpg
       description: 2013, acrylic and pencil on paper, 267×197mm
-
+    - file: /img/artists/NozomuTakekawa/02l.jpg
+      description: 2013, acrylic and pencil on paper, 267×197mm

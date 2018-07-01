@@ -145,6 +145,11 @@ script
         $$('#works .thumbnail .swiper-wrapper').empty();
 
         for(var i = 0; i < imgs.length; i++){
+          
+          if(imgs[i]['max-height'] && imgs[i]['max-width']){
+            console.log(imgs)
+            $$('#works .main .swiper-wrapper').append('<div class="swiper-slide">').append('<img src="' + imgs[i]['file'] + '" class="img' + i + '" style="max-width:' + String(imgs[i]['max-width']) + 'px;,max-height:' + String(imgs[i]['max-height']) + 'px">').after('<div class="text">' + imgs[i]['description'] + '</div>');
+          }
           $$('#works .main .swiper-wrapper').append('<div class="swiper-slide">').append('<img src="' + imgs[i]['file'] + '" class="img' + i + '">').after('<div class="text">' + imgs[i]['description'] + '</div>');
           $$('#works .thumbnail .swiper-wrapper').append('<div class="swiper-slide">').append('<img src="' + imgs[i]['file'] + '">');
         }
