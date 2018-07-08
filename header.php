@@ -21,6 +21,7 @@
     <link rel="stylesheet/less" href="/css/essay.less?t=<?= time(); ?>">
     <?php elseif(preg_match('/contact/', $url)): ?>
     <link rel="stylesheet/less" href="/css/contact.less?t=<?= time(); ?>">
+
     <?php else: ?>
     <script type="text/javascript" src="/js/swiper.min.js"></script>
     <link rel="stylesheet/less" href="/css/swiper.css">
