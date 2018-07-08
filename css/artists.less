@@ -11,6 +11,9 @@
   @media (max-width: 599px) { @rules(); }
 }
 
+.maxHeight767(@rules) {
+  @media (max-height: 767px) { @rules(); }
+}
 
 @black: #3e3a39;
 @text-color: #4c4948;
@@ -372,8 +375,8 @@ html.works {
       top: 0;
       bottom: 0;
       margin: auto;
-      height: 7vh;
-      width: 2vh;
+      height: 54px;
+      width: 12px;
       background-size: cover;
       left: 0;
       .sm({
@@ -385,7 +388,7 @@ html.works {
       div {
         display: inline-block;
         height: 1px;
-        width: 1.4vh;
+        width: 8px;
         background-color: @dark-gray;
         margin: 0;
         position: absolute;
@@ -394,14 +397,14 @@ html.works {
 
         &:nth-of-type(1) {
           transform: rotate(-45deg);
-          top: 2.5vh;
+          top: 24px;
           .sm({
-            top: 4.3vh;
+            top: 4.4vh;
           });
         }
         &:nth-of-type(2) {
           transform: rotate(45deg);
-          top: 3.4vh;
+          top: 29px;
           .sm({
             top: 5.2vh;
           });
@@ -413,8 +416,8 @@ html.works {
       top: 0;
       bottom: 0;
       margin: auto;
-      height: 7vh;
-      width: 2vh;
+      height: 54px;
+      width: 12px;
       background-size: cover;
       right: 0;
       .sm({
@@ -423,7 +426,7 @@ html.works {
       div {
         display: inline-block;
         height: 1px;
-        width: 1.4vh;
+        width: 8px;
         background-color: @dark-gray;
         margin: 0;
         position: absolute;
@@ -432,14 +435,14 @@ html.works {
 
         &:nth-of-type(1) {
           transform: rotate(45deg);
-          top: 2.5vh;
+          top: 24px;
           .sm({
-            top: 4.3vh;
+            top: 4.4vh;
           });
         }
         &:nth-of-type(2) {
           transform: rotate(-45deg);
-          top: 3.4vh;
+          top: 29px;
           .sm({
             top: 5.2vh;
           });
@@ -471,12 +474,15 @@ html.works {
     .name{
       font-size: 16px;
       position: absolute;
-      top: calc(41vh + 216px);
+      top: calc(41vh + 218px);
       z-index: 9999;
       .md({
         text-align: center;
         top: calc(81.5vh - 105px);
         width: 100vw;
+      });
+      .maxHeight767({
+        top: calc(91vh - 166px);
       });
       .sm({
         font-size: 15px;
@@ -565,8 +571,8 @@ html.works {
     background-color: @dark-gray;
     margin: 0;
     position: absolute;
-    right: 32px;
-    top: 32px;
+    right: 36px;
+    top: 40px;
     .sm({
       right: 12px;
       top: 28px;

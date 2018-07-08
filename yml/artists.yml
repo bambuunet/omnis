@@ -3,6 +3,8 @@ ToruKaneko:
   img:
     - file: /img/artists/ToruKaneko/01l.jpg
       description: Espace, 2016, acrylic on panel, 1760×1760mm
+      max-width: 73%
+      max-height: 73%
     - file: /img/artists/ToruKaneko/02l.jpg
       description: Espace, 2011, acrylic on panel, 1760×1760mm
   prof:
@@ -82,8 +84,8 @@ KazuakiKaneda:
   img:
     - file: /img/artists/KazuakiKaneda/01l.jpg
       description: 2015, acrylic on panel, 180x180mm
-      max-width: 350
-      max-height: 350
+      max-width: 73%
+      max-height: 73%
 MiwaFujimoto:
   name: Miwa Fujimoto
   img:

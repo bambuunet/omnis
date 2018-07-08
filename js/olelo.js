@@ -507,12 +507,12 @@ var Olelo = function(filepath, id, asynchronous){
     var upperAnchor = getAnchor(indent - 1);
     var beforeUpperAnchorRE = new RegExp('(?=' + upperAnchor + ')');
 
-    var res = '\n' + setIndent(indent) + '<' + tag ;
+    var res = '\n' + '<' + tag ;
     res += attrStr;
-    res += '>\n' + setIndent(indent + 1) ;
-    res += text + '\n' + setIndent(indent) ;
+    res += '>\n';
+    res += text + '\n';
     res += currentAnchor;
-    res += hasEndTag ? setIndent(indent) + '</' + tag + '>\n' : '';
+    res += hasEndTag ? '</' + tag + '>\n' : '';
 
     if(tag == '--'){
       res = res.replace('<-->', '<!-- ').replace('</-->', ' -->');
