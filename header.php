@@ -46,7 +46,7 @@
 
       <nav>
         <ul>
-          <li class="nav-link pulldown"><span id="nav-exhibitions" class="nav-link">Exhibitions</span>
+          <li class="nav-link pulldown *none"><span id="nav-exhibitions" class="nav-link">Exhibitions</span>
           </li>
           <div style="display: none">
             <ul>
@@ -54,13 +54,14 @@
               <li class="nav-link"><a data-href="/exhibitions/2017/">2017</a></li>
             </ul>
           </div>
+          <li class="nav-link"><a data-href="/exhibitions/2017/" id="nav-exhibitions">Exhibitions</a></li>
           <li class="nav-link"><a data-href="/artists/" id="nav-artists">Artists</a></li>
           <li class="nav-link"><a data-href="/about/" id="nav-about">About</a></li>
           <li class="nav-link"><a data-href="/essay/" id="nav-essay">Essay</a></li>
           <li class="nav-link"><a data-href="/contact/" id="nav-contact">Contact</a></li>
-          <li class="right"><a data-href="/index_on_exhibition/">Online Shop</a></li>
+          <li class="right *none"><a data-href="/index_on_exhibition/">Online Shop</a></li>
         </ul>
-        <ul class="social md-none lg-none xl-none">
+        <ul class="social md-none lg-none xl-none *none">
           <li>
             <a href="" target="_blank">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
