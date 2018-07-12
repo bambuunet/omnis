@@ -159,10 +159,12 @@ script
             for(var i = 0; i < imgs.length; i++){
               var imgw = $$('.img' + i).width();
               var imgh = $$('.img' + i).height();
+              $$('.img' + i).removeClass('yoko');
+              $$('.img' + i).removeClass('tate');
               if(imgw > imgh){
                 $$('.img' + i).addClass('yoko');
               }
-              else if(imgw <= imgh){
+              else{
                 $$('.img' + i).addClass('tate');
               }
             }
