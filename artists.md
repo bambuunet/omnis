@@ -4,7 +4,7 @@ section.director
   .textWrap
     .name Toru Kaneko
     p.jp 金子透は1955年神奈川県生まれ。  1978年に武蔵野美術大学造形学部油絵学科卒業。1980年から1982年までフランスの国立美術学校（Ecole National Superieur Des Beaux-Arts）に留学。1982年から1983年まで銅版画の前衛的な研究所（ATELIER17）にてヘイターに師事。これまでの主な展覧会に、現代日本美術展、ベルエイムジュン（パリ）、ギャラリエアンドウ（渋谷松濤）をはじめ数多くの個展。その他の主な活動に、テアトル・ティポグラフィック（フランスで活躍しているエディター）とゲーテのアルマナックの本を制作（仏、ISSY LES MOULINEAUX市立図書館買上）などがある。
-    p.en 1955 Born in Yokohama, Kanagawa  1978 Graduated from Musashino Art University. 1980-1982 Ecole National Supérieur Des Beaux-Arts. 1982-1983 Atelier dix-sept studied with S.W.Hayter Exhibition:Contemporary Art Exhibition of Japan, Bernheim-jeune (Paris), Galerie Ando (Tokyo), and many others. Produced « Goethe Almanach de 1822 » with Theatre Typographique
+    p.en 1955 Born in Yokohama, Kanagawa  1978 Graduated from Musashino Art University.  1980-1982 Ecole National Supérieur Des Beaux-Arts.  1982-1983 Atelier dix-sept studied with S.W.Hayter  Exhibition:Contemporary Art Exhibition of Japan, Bernheim-jeune (Paris), Galerie Ando (Tokyo), and many others. Produced « Goethe Almanach de 1822 » with Theatre Typographique
 
 hr
 
@@ -140,6 +140,7 @@ script
       }
 
       $$('body').addClass('hide300');
+
       setTimeout(function(){
         $$('#works .main .swiper-wrapper').empty();
         $$('#works .thumbnail .swiper-wrapper').empty();
@@ -161,7 +162,9 @@ script
               var imgh = $$('.img' + i).height();
               $$('.img' + i).removeClass('yoko');
               $$('.img' + i).removeClass('tate');
-              if(imgw > imgh){
+              if(imgw === 0 || imgh === 0){
+              }
+              else if(imgw > imgh){
                 $$('.img' + i).addClass('yoko');
               }
               else{

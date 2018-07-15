@@ -32,6 +32,18 @@ form {
     width: calc(100vw - 60px);
   });
 
+  div{
+    width: 500px;
+    .sm({
+      width: 100%;
+    });
+  }
+
+  .msg{
+    display: inline-block;
+    vertical-align: top;
+  }
+
   div:not(:first-child) {
     margin-top: 32px;
     .sm({
@@ -70,6 +82,7 @@ form {
 
   button {
     background: #fff;
+    cursor: pointer;
     font-size: @font-size;
     height: 24px;
     margin: 60px auto 0 172px;
@@ -79,6 +92,16 @@ form {
     .sm({
       margin: 60px auto 0 auto;
     });
+    &#button-dummy{
+      margin-top: -24px;
+    }
+  }
+
+  .msg{
+    display: none;
+    &.error{
+      display: inline-block;
+    }
   }
 }
 
@@ -96,7 +119,7 @@ article{
     height: calc(100vh - 138px);
   });
   .md({
-    height: calc(100vh - 211px);
+    height: calc(100vh - 217px);
     padding-top: calc(50vh - 340px);
     margin-bottom: calc(-50vh + 340px);
   });

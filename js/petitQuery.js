@@ -1,5 +1,5 @@
 /*
-petit query var0.1.7
+petit query var0.1.9
 取得は最初の1個(parent,children,prev...)
 操作は全て(wrap)
 
@@ -270,7 +270,7 @@ petitQuery.prototype = {
     return null;
   },
   next: function(selector){
-    if(selector === null || $$.checkSameSelector(this[0].nextElementSibling, selector)) return $$(this[0].nextElementSibling);
+    if(selector === null || selector === undefined || $$.checkSameSelector(this[0].nextElementSibling, selector)) return $$(this[0].nextElementSibling);
     return null;
   },
   not: function(selector){
@@ -363,8 +363,9 @@ petitQuery.prototype = {
       var updateClasses = $$(this[i]).attr('class');
       if(!updateClasses) continue;
       for(var c in classes){
-        var re = new RegExp('\\s?' + classes[c]);
-        updateClasses = updateClasses.replace(re, '');
+        //var re = new RegExp('\\s?' + classes[c]);
+        //updateClasses = updateClasses.replace(re, '');
+        updateClasses = updateClasses.replace(classes[c], '');
       }
       $$(this[i]).attr('class', updateClasses);
     }
