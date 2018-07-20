@@ -99,9 +99,18 @@ form {
 
   .msg{
     display: none;
-    &.error{
-      display: inline-block;
-    }
+    font-size: 1.0rem;
+    margin-left: 4px;
+  }
+  .error + .msg{
+    color: #da6973;
+    display: inline-block;
+  }
+  .error{
+    border-color: #da6973;
+  }
+  [disabled=disabled]{
+    pointer-events:none;
   }
 }
 

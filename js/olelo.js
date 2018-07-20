@@ -1,6 +1,6 @@
 /*ﾟ･*:.｡..｡.:*･ﾟ ﾟ･*:.｡..｡.:*･ﾟ ﾟ･*:.｡..｡.:*･ﾟ ﾟ･*:.｡..｡.:*･ﾟ
 
-  Olelo 1.1.0
+  Olelo 1.1.1
   Olelo markdown files as html.
 
   Copyright 2018- Ringo Takemura
@@ -375,7 +375,7 @@ var Olelo = function(filepath, id, asynchronous){
     }
 
     //class
-    var classRE = line.match(/^\.([^\s\(\n]+)(?=(\s|\(|\n|$))/);
+    var classRE = line.match(/^\.([^\s\n\(]+)(?=(\s|\(|\n|$))/);
     if(classRE){
       var classNames = '';
       var classArray = classRE[1].split('.');
@@ -388,9 +388,10 @@ var Olelo = function(filepath, id, asynchronous){
     }
 
     //othre attr
-    var otherRE = line.match(/^\(([^\)]*)\)(?=(\s|\n|$))/);
+    var otherRE = line.match(/^\((([^\)]|\\\))*)\)(?=(\s|\n|$))/);
     if(otherRE){
-      res += ' ' + otherRE[1];
+      otherRE = otherRE[1].replace("\\(", '(').replace("\\)", ')');
+      res += ' ' + otherRE;
     }
 
     return res;
