@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102619372-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-102619372-1');
+  </script>
+
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="Content-Script-Type" content="text/javascript">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
@@ -59,7 +69,7 @@
           <li class="nav-link"><a data-href="/about/" id="nav-about">About</a></li>
           <li class="nav-link"><a data-href="/essay/" id="nav-essay">Essay</a></li>
           <li class="nav-link"><a data-href="/contact/" id="nav-contact">Contact</a></li>
-          <li class="right *none"><a data-href="/index_on_exhibition/">Online Shop</a></li>
+          <li class="right"><a href="/img/pdf/20180806_omnis_release1_web.pdf" target="_blank">News Release</a></li>
         </ul>
         <ul class="social md-none lg-none xl-none *none">
           <li>

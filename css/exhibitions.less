@@ -11,6 +11,10 @@
   @media (max-width: 599px) { @rules(); }
 }
 
+.maxHeight767(@rules) {
+  @media (max-height: 767px) { @rules(); }
+}
+
 @black: #3e3a39;
 @text-color: #4c4948;
 @dark-gray: #727171;
@@ -345,6 +349,10 @@ html.works {
     left: 0;
     margin: auto;
     position: relative;
+    .maxHeight767({
+      max-height: calc(100vh - 134px);
+      width: auto;
+    });
     .sm({
       position: relative;
       left: 0;

@@ -74,7 +74,9 @@ $$(document).ready(function(){
   });
 
   $$('a').on('click', function(){
-    link($$(this));
+    if($$(this).attr('target') !== '_blank'){
+      link($$(this));
+    }
   });
 });
 
