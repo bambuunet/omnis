@@ -86,12 +86,6 @@ section.artists {
     margin: 56px 0 0 0;
     height: 62px;
   }
-  .nameOnly{
-    margin-top: -20px;
-    .wrap{
-      height: 108px;
-    }
-  }
   .wrap {
     position: relative;
     .sm({
@@ -222,6 +216,32 @@ section.artists {
           transform: matrix(1, 0, 0, 1.05, 0, 0);
         });
       }
+    }
+  }
+  .nameOnly{
+    margin-top: -20px;
+    .sm({
+      margin-top: 0;
+    });
+    .wrap{
+      height: 145px;
+      .md({
+        height: calc(21vw - 38px);
+      });
+      .sm({
+        height: auto;
+      });
+    }
+    .person{
+      .sm({
+        position: relative;
+        height: calc(36vw - 18px);
+        &:nth-child(even){
+          .sm({
+            margin-left: calc(10vw - 2px);
+          });
+        }
+      });
     }
   }
 }

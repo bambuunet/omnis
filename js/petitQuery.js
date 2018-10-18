@@ -1,5 +1,5 @@
 /*
-petit query var0.1.9
+petit query var0.1.10
 取得は最初の1個(parent,children,prev...)
 操作は全て(wrap)
 
@@ -14,9 +14,13 @@ window.$$ = function(selector){
 $$.query = function(context, selector){
   var nodes = [];
   if(Object.prototype.toString.call(selector).match(/String/)){
-    q =  context.querySelectorAll(selector);
-    for(var i = 0; i < q.length; i++) nodes.push(q[i]);
-    return nodes;
+    try{
+      q =  context.querySelectorAll(selector);
+      for(var i = 0; i < q.length; i++) nodes.push(q[i]);
+    }
+    finally{
+      return nodes;
+    }
   }
   return [selector];
 };

@@ -1,9 +1,9 @@
 /*ﾟ･*:.｡..｡.:*･ﾟ ﾟ･*:.｡..｡.:*･ﾟ ﾟ･*:.｡..｡.:*･ﾟ ﾟ･*:.｡..｡.:*･ﾟ
 
-  Olelo 1.1.1
+  Olelo 1.2.1
   Olelo markdown files as html.
 
-  Copyright 2018- Ringo Takemura
+  Copyright 2018- Ruby Fumizuki
 
   Licensed under MIT (http://opensource.org/licenses/MIT)
   Released on: May 1, 2018
@@ -130,9 +130,10 @@ var Olelo = function(filepath, id, asynchronous){
     var indent = hash['indent'];
 
     //start
-    if(i >= mdArray.length) return;
     while(true){
       i++;
+      if(i >= mdArray.length) return;
+
       var line = mdArray[i];
       var indent2 = getIndent(line, baseIndent);
       //end

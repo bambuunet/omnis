@@ -1,5 +1,5 @@
 ﻿/*
-haole ver0.1.1
+haole ver0.1.2
 */
 var Haole = function(langArr, hash){
   'use strict';
@@ -90,17 +90,25 @@ var Haole = function(langArr, hash){
 
     $$('a').each(function(){
       var url = $$(this).attr('data-href');
+      var anchor = "";
+      if(url && url.match(/#\w+/)){
+        url = $$(this).attr('data-href').replace(/#\w+/, "");
+        anchor = $$(this).attr('data-href').match(/#\w+/)[0];
+      }
       if(url === null || url === undefined){
         return true;
       }
       else if(url.match(THIS.paramRE)){
         url = url.replace(THIS.paramRE, '$1' + lang);
+        url += anchor;
       }
       else if(url.match(/\?/)){
         url += '&' + THIS.urlParameter + '=' + lang;
+        url += anchor;
       }
       else{
         url += '?' + THIS.urlParameter + '=' + lang;
+        url += anchor;
       }
       $$(this).attr('data-href', url);
     })

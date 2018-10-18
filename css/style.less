@@ -425,6 +425,11 @@ html.menu header {
       li {
         display: inline;
         margin: 0 24px 0 0;
+        svg{
+          position: absolute;
+          top: 2px;
+          padding: 0 0 0 7px;
+        }
       }
     }
   }
@@ -562,8 +567,21 @@ footer {
     li {
       display: inline;
       margin: 0 0 0 24px;
+
+      &.instagram{
+        position: absolute;
+        top: -1px;
+        right: 0;
+        span{
+          color: #4b4848;
+          font-size: 1.2rem;
+          position: absolute;
+          right: 24px;
+          top: -2px;
+          white-space: nowrap;
+        }
+      }
     }
-      
   }
 }
 

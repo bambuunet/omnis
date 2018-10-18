@@ -1,2 +1,9 @@
 RewriteEngine on
 RewriteRule ^(|.*\.html|.*\/)$ /layout.php [L]
+
+
+#開発環境のみ使用
+#AuthType Basic
+#AuthName "Auth"
+#AuthUserFile /var/www/html/omnis/.htpasswd
+#require valid-user

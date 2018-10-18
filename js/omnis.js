@@ -109,18 +109,25 @@ function link(node){
     setCurrent(url.replace('/', ''));
     $$('html').removeAttr('id');
     $$('html').removeClass('menu');
-    setSizeClass()
-
-    window.location = url ; 
-
+    
     $$('body').addClass('show300');
+    window.location = url ;
+    setSizeClass();
+
+    setTimeout(function(){
+      $$('body').removeClass('hide300');
+    }, 400);
   }, 400);
 }
 
 function setCurrent(dir){
   dir = dir.replace(/\/.*/, '');
   $$('.nav-link').removeClass('current');
-  $$('#nav-' + dir).parent().addClass('current');
+
+  //dirに#があるとバグる
+  if(!dir.match(/#/)){
+    $$('#nav-' + dir).parent().addClass('current');
+  } 
 }
 
 function setSizeClass(){

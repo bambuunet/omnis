@@ -1,5 +1,5 @@
 section.director
-  h1.lg-mt-8.xl-mt-8 Art Director / Artists
+  h1.lg-mt-8.xl-mt-8 Art Director / Artist
   .imgWrap [img#ToruKaneko(src="/img/artists/ToruKaneko/01m.jpg")]
   .textWrap
     .name Toru Kaneko
@@ -82,6 +82,17 @@ section.artists
     .wrap
       .person
         .name Mari Tsutsumi
+      .person
+        .name Mai Muragishi
+      .person
+        .name Natsuki Kobayashi
+      .person
+        .name Shun Sato
+    .wrap
+      .person
+        .name Yuki Nonaka
+      .person
+        .name Wataru Yasuda
 section.photoBy photo Mareo Suemasa
   
 
