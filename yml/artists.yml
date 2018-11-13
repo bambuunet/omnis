@@ -1,6 +1,8 @@
 ToruKaneko:
   name: Toru Kaneko
   img:
+    - file: /img/artists/ToruKaneko/03l.jpg
+      description: Espace, 2018, acrylic on panel, 1760×1760mm
     - file: /img/artists/ToruKaneko/01l.jpg
       description: Espace, 2016, acrylic on panel, 1760×1760mm
     - file: /img/artists/ToruKaneko/02l.jpg
@@ -20,6 +22,8 @@ YukariAndo:
 NobuyoshiFukushima:
   name: Nobuyoshi Fukushima
   img:
+    - file: /img/artists/NobuyoshiFukushima/04l.jpg
+      description: 2018, graphite powder on paper, 650×500mm
     - file: /img/artists/NobuyoshiFukushima/01l.jpg
       description: 2016, charcoal on paper, 542×382mm
     - file: /img/artists/NobuyoshiFukushima/02l.jpg
@@ -56,6 +60,8 @@ MikikoHirayama:
       description: 2016, charcoal on paper, 407×297mm
     - file: /img/artists/MikikoHirayama/02l.jpg
       description: 2016, charcoal on paper, 407×297mm
+    - file: /img/artists/MikikoHirayama/03l.jpg
+      description: 2018, charcoal on paper, 158x227mm
 MamikoNiinuma:
   name: Mamiko Niinuma
   img:
@@ -90,7 +96,7 @@ MiwaFujimoto:
     - file: /img/artists/MiwaFujimoto/01l.jpg
       description: 2017, acrylic on canvas, 415×320mm
     - file: /img/artists/MiwaFujimoto/02l.jpg
-      description: 2017, acrylic on canvas, 227×158mm                  
+      description: 2017, acrylic on canvas, 227×158mm
     - file: /img/artists/MiwaFujimoto/03l.jpg
       description: 2015, acrylic on wooden board, 293×225mm
 YukiSato:
@@ -103,6 +109,8 @@ YukiSato:
 RingoTakemura:
   name: Ringo Takemura
   img:
+    - file: /img/artists/RingoTakemura/03l.jpg
+      description:  2018, acrylic on canvas, 530×530mm
     - file: /img/artists/RingoTakemura/01l.jpg
       description:  2017, acrylic on paper, 158×227mm
     - file: /img/artists/RingoTakemura/02l.jpg
@@ -128,3 +136,35 @@ NozomuTakekawa:
       description: 2013, acrylic and pencil on paper, 267×197mm
     - file: /img/artists/NozomuTakekawa/02l.jpg
       description: 2013, acrylic and pencil on paper, 267×197mm
+MaiMuragishi:
+  name: Mai Muragishi
+  img:
+    - file: /img/artists/MaiMuragishi/01l.jpg
+      description: 2018, mineral pigments and glue on paper, 150×150mm
+      max-width: 73%
+      max-height: 73%
+    - file: /img/artists/MaiMuragishi/02l.jpg
+      description: 2018, mineral pigments and glue on paper, 150×150mm
+      max-width: 73%
+      max-height: 73%
+    - file: /img/artists/MaiMuragishi/03l.jpg
+      description: 2018, mineral pigments and glue on paper, 150×150mm
+      max-width: 73%
+      max-height: 73%
+    - file: /img/artists/MaiMuragishi/04l.jpg
+      description: 2018, mineral pigments and glue on paper, 150×150mm
+      max-width: 73%
+      max-height: 73%
+YukiNonaka:
+  name: Yuki Nonaka
+  img:
+    - file: /img/artists/YukiNonaka/01l.jpg
+      description: 2018, acrylic on canvas, 227×158mm
+      max-width: 77%
+      max-height: 77%
+NatsukiKobayashi:
+  name: Natsuki Kobayashi
+  img:
+    - file: /img/artists/NatsukiKobayashi/01l.jpg
+      description: 2018, photography, 841×473ｍｍ
+

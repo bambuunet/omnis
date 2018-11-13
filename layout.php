@@ -6,6 +6,8 @@ $mdDirectory = '';
 $mdDirectoryUrl1 = preg_replace('/(\.html|\/)[\?\=\w]*$/', '.md', $_SERVER['REQUEST_URI']);
 $mdRes1 = file_get_contents(dirname(__FILE__).$mdDirectoryUrl1);
 
+
+
 if($mdRes1){
   $res = $mdDirectoryUrl1;
 }

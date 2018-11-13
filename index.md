@@ -120,7 +120,7 @@ hr
 section#information
   ## Information
   .jp omnis「EVOLVING イメージの解体 リアリティへの挑戦」
-  .en omnis「EVOLVING」
+  .en omnis “EVOLVING”
   .jp 会期：2019.1.18 fri - 1.30 wed  場所：渋谷ヒカリエ8階　8/CUBE  時間：11:00 - 20:00 （最終日は18:00まで）  料金：入場無料  主催：アールエイアーツ株式会社
   .en Date : January 18 - 30, 2019  Venue : Shibuya Hikarie 8F 8/CUBE  Open hour : 11:00 AM - 8:00 PM（Last day until 6:00 p.m.）  Admission : Free  Organiser : RAarts inc.  
   .jp.*mt16.*f13.sm-f11
@@ -150,11 +150,13 @@ section#pastExhibition
         img(src="/img/common/Map_EN.png")
     .description
       ul.jp
-        li JR線・銀座線・井の頭線 [br.md-none.lg-none.xl-none]「渋谷駅」 2F連絡通路と直結
-        li 東横線・田園都市線・半蔵門線・副都心線 [br.md-none.lg-none.xl-none]「渋谷駅」 15番出口と直結
+        //li JR線・銀座線・井の頭線 [br.md-none.lg-none.xl-none]「渋谷駅」 2F連絡通路と直結
+        li JR線、東京メトロ銀座線、京王井の頭線 [br.sm-none]「渋谷駅」と2F連絡通路で直結
+        //li 東横線・田園都市線・半蔵門線・副都心線 [br.md-none.lg-none.xl-none]「渋谷駅」 15番出口と直結
+        li 東急東横線・田園都市線、東京メトロ半蔵門線・副都心線 [br.sm-none]「渋谷駅」15番出口と直結
       ul.en
-        li JR Line · Ginza Line · Inokashira Line  "Shibuya Station" 2F Direct Connection with the Passageway
-        li Toyoko Line · Denentomichi Line · Hanzomon Line · Fukutoshin Line  "Shibuya Station" Exit 15 and Directly
+        li JR Line, Tokyo Metro Ginza Line, Keio Inokashira Line "Shibuya Station", direct connection to 2F connecting passage.
+        li Tokyu Toyoko Line, Den-en-toshi Line, Tokyo Metro Hanzomon Line, Fukutoshin Line "Shibuya Station", direct connection to Exit 15.
 
         
 

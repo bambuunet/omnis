@@ -1,6 +1,6 @@
 section.director
   h1.lg-mt-8.xl-mt-8 Art Director / Artist
-  .imgWrap [img#ToruKaneko(src="/img/artists/ToruKaneko/01m.jpg")]
+  .imgWrap [img#ToruKaneko(src="/img/artists/ToruKaneko/03s.jpg")]
   .textWrap
     .name Toru Kaneko
     p.jp 金子透は1955年神奈川県生まれ。  1978年に武蔵野美術大学造形学部油絵学科卒業。1980年から1982年までフランスの国立美術学校（Ecole National Superieur Des Beaux-Arts）に留学。1982年から1983年まで銅版画の前衛的な研究所（ATELIER17）にてヘイターに師事。これまでの主な展覧会に、現代日本美術展、ベルエイムジュン（パリ）、ギャラリエアンドウ（渋谷松濤）をはじめ数多くの個展。その他の主な活動に、テアトル・ティポグラフィック（フランスで活躍しているエディター）とゲーテのアルマナックの本を制作（仏、ISSY LES MOULINEAUX市立図書館買上）などがある。
@@ -16,8 +16,8 @@ section.artists
         img#YukariAndo(src="/img/artists/YukariAndo/01s.jpg")
       .name Yukari Ando
     .person.imgTop
-      .imgWrap.yoko.double
-        img#NobuyoshiFukushima(src="/img/artists/NobuyoshiFukushima/01s.jpg")
+      .imgWrap.tate
+        img#NobuyoshiFukushima(src="/img/artists/NobuyoshiFukushima/04s.jpg")
       .name Nobuyoshi Fukushima
     .person.imgBottom
       .imgWrap.yoko
@@ -28,53 +28,62 @@ section.artists
         img#MikiSugiyama(src="/img/artists/MikiSugiyama/01s.jpg")
       .name Miki Sugiyama
   .wrap
-    .person.imgBottom
-      .imgWrap.tate
-        img#NatsukiTakeuchi(src="/img/artists/NatsukiTakeuchi/02s.jpg")
-      .name Natsuki Takeuchi
-    .person.imgBottom
-      .imgWrap.tate
-        img#MikikoHirayama(src="/img/artists/MikikoHirayama/01s.jpg")
-      .name Mikiko Hirayama
     .person.imgTop
       .imgWrap.tate
-        img#MamikoNiinuma(src="/img/artists/MamikoNiinuma/01s.jpg")
-      .name Mamiko Niinuma
+        img#YukiNonaka(src="/img/artists/YukiNonaka/01s.jpg")
+      .name Yuki Nonaka
     .person.imgTop
+      .imgWrap.tate
+        img#MaiMuragishi(src="/img/artists/MaiMuragishi/01s.jpg")
+      .name Mai Muragishi
+    .person.imgBottom
       .imgWrap.tate
         img#YutakaIshida(src="/img/artists/YutakaIshida/01s.jpg")
       .name Yutaka Ishida
+    .person.imgBottom
+      .imgWrap.tate
+        img#NatsukiKobayashi(src="/img/artists/NatsukiKobayashi/01s.jpg")
+      .name Natsuki Kobayashi
   .wrap
-    .person.imgBottom
-      .imgWrap.yoko
-        img#taokato(src="/img/artists/taokato/03s.jpg")
-      .name tao..kato
-    .person.imgBottom
+    .person.imgTop
       .imgWrap.tate
         img#NozomuTakekawa(src="/img/artists/NozomuTakekawa/01s.jpg")
       .name Nozomu Takekawa
     .person.imgTop
-      .imgWrap.shikaku
-        img#KazuakiKaneda(src="/img/artists/KazuakiKaneda/01s.jpg")
-      .name Kazuaki Kaneda
-    .person.imgTop
       .imgWrap.tate
-        img#MiwaFujimoto(src="/img/artists/MiwaFujimoto/01s.jpg")
-      .name Miwa Fujimoto
+        img#MikikoHirayama(src="/img/artists/MikikoHirayama/01s.jpg")
+      .name Mikiko Hirayama
+    .person.imgBottom
+      .imgWrap.tate
+        img#RingoTakemura(src="/img/artists/RingoTakemura/03s.jpg")
+      .name Ringo Takemura
+    .person.imgBottom
+      .imgWrap.tate
+        img#MamikoNiinuma(src="/img/artists/MamikoNiinuma/01s.jpg")
+      .name Mamiko Niinuma
   .wrap
     .person.imgTop
       .imgWrap.yoko
         img#YukiSato(src="/img/artists/YukiSato/01s.jpg")
       .name Yuki Sato
     .person.imgTop
-      .imgWrap.yoko
-        img#RingoTakemura(src="/img/artists/RingoTakemura/01s.jpg")
-      .name Ringo Takemura
+      .imgWrap.tate
+        img#NatsukiTakeuchi(src="/img/artists/NatsukiTakeuchi/02s.jpg")
+      .name Natsuki Takeuchi
     .person.imgBottom
+      .imgWrap.tate
+        img#KazuakiKaneda(src="/img/artists/KazuakiKaneda/01s.jpg")
+      .name Kazuaki Kaneda
+    .person.imgBottom
+      .imgWrap.tate
+        img#MiwaFujimoto(src="/img/artists/MiwaFujimoto/01s.jpg")
+      .name Miwa Fujimoto
+  .wrap
+    .person.imgTop
       .imgWrap.yoko
         img#MioHorie(src="/img/artists/MioHorie/01s.jpg")
       .name Mio Horie
-    .person.imgBottom
+    .person.imgTop
       .imgWrap.yoko
         img#TomonaKonita(src="/img/artists/TomonaKonita/01s.jpg")
       .name Tomona Konita
@@ -83,14 +92,7 @@ section.artists
       .person
         .name Mari Tsutsumi
       .person
-        .name Mai Muragishi
-      .person
-        .name Natsuki Kobayashi
-      .person
         .name Shun Sato
-    .wrap
-      .person
-        .name Yuki Nonaka
       .person
         .name Wataru Yasuda
 section.photoBy photo Mareo Suemasa
@@ -162,7 +164,9 @@ script
             console.log(imgs)
             $$('#works .main .swiper-wrapper').append('<div class="swiper-slide">').append('<img src="' + imgs[i]['file'] + '" class="img' + i + '" style="max-width:' + String(imgs[i]['max-width']) + ';max-height:' + String(imgs[i]['max-height']) + '">').after('<div class="text">' + imgs[i]['description'] + '</div>');
           }
-          $$('#works .main .swiper-wrapper').append('<div class="swiper-slide">').append('<img src="' + imgs[i]['file'] + '" class="img' + i + '">').after('<div class="text">' + imgs[i]['description'] + '</div>');
+          else{
+            $$('#works .main .swiper-wrapper').append('<div class="swiper-slide">').append('<img src="' + imgs[i]['file'] + '" class="img' + i + '">').after('<div class="text">' + imgs[i]['description'] + '</div>');
+          }
           $$('#works .thumbnail .swiper-wrapper').append('<div class="swiper-slide">').append('<img src="' + imgs[i]['file'] + '">');
         }
 
@@ -175,7 +179,7 @@ script
               $$('.img' + i).removeClass('tate');
               if(imgw === 0 || imgh === 0){
               }
-              else if(imgw > imgh){
+              else if(imgw / imgh > 1.01){
                 $$('.img' + i).addClass('yoko');
               }
               else{
