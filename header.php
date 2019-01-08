@@ -70,7 +70,7 @@
           <li class="nav-link"><a data-href="/about/" id="nav-about">About</a></li>
           <li class="nav-link"><a data-href="/essay/" id="nav-essay">Essay</a></li>
           <li class="nav-link"><a data-href="/contact/" id="nav-contact">Contact</a></li>
-          <li class="right"><a href="/img/pdf/omnis_release2_web_1110.pdf" target="_blank">News Release</a></li>
+          <li class="right"><a href="/img/pdf/omnis_release.pdf" target="_blank">News Release</a></li>
         </ul>
         <ul class="social">
           <li class="*none">
